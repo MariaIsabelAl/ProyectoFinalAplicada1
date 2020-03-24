@@ -1,11 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
+using DataVentas.Entidades;
 
 namespace DataVentas.DAL
 {
-    public class Contexto
+    public class Contexto : DbContext
     {
-        //esta es una clase de prueba
+        public DbSet<Usuarios> Usuarios { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite(@"Data Source= DATA\DataVentas.db");
+        }
     }
 }
