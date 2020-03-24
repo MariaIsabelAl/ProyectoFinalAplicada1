@@ -68,7 +68,7 @@
             <TextBlock Name="EmailLabel" Text="Email" Margin="30,5,5,5" Width="52" />
             <TextBox Name="EmailTextBox" Margin="12,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="200">
                 <TextBox.Text>
-                    <Binding Path="Clave" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding Path="Email" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
                             <ExceptionValidationRule/>
                         </Binding.ValidationRules>
