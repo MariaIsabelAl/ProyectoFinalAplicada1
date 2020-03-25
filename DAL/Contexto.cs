@@ -14,5 +14,8 @@ namespace DataVentas.DAL
         {
             optionsBuilder.UseSqlite(@"Data Source= DATA\DataVentas.db");
         }
+
+       
+        
     }
 }
