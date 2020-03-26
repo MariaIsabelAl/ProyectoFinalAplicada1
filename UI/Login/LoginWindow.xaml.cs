@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DataVentas.BLL;
 using DataVentas.DAL;
 using DataVentas.Entidades;
 
@@ -20,7 +21,8 @@ namespace DataVentas.UI.Login
     /// </summary>
     public partial class LoginWindow : Window 
     {
-       
+        List<Usuarios> lista = new List<Usuarios>();
+        public static int UsuarioId;
 
         public LoginWindow()
         {
@@ -30,8 +32,26 @@ namespace DataVentas.UI.Login
         private void EntrarButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow m = new MainWindow();
-            m.Show();
-        }
 
+            lista = UsuariosBll.GetList(p => true);
+            bool paso = false;
+            foreach (var item in lista)
+            {
+                if ((item.NombreUsuario == UsuarioTexbox.Text) && (item.Clave == PasswordBox.Password))
+                {
+                    UsuarioId = item.UsuarioId;
+                    m.Show();
+                    paso = true;
+                    break;
+                }
+            }
+            if (paso == false)
+            {
+                MessageBox.Show("Nombre de usuario o Contraseña incorrecto", "Error", MessageBoxButton.OK, MessageBoxImage.Information);
+                UsuarioTexbox.Text = string.Empty;
+                PasswordBox.Password = string.Empty;
+                UsuarioTexbox.Focus();
+            }
+        }
     }
 }

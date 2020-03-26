@@ -4,22 +4,106 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataVentas.UI.Login"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="Login" Height="300" Width="300" Background="#06F64F">
+        Title="Login" Height="450" Width="380" ResizeMode="NoResize">
     <Grid>
-        
-        <Border Background="Black" CornerRadius="20" Margin="20">
-            <StackPanel>
-                <Label Content="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
-                <Separator/>
-                <Label Content="Username" Foreground="White"/>
-                <TextBox x:Name="UsernameTextBox" Background="Gray" Foreground="White" FontSize="18"/>
-                <Label Content="Password" Foreground="White"/>
-                <TextBox x:Name="PasswordTextBox" Background="Gray" Foreground="White" FontSize="18"/>
-                <Button x:Name="EntrarButton" Content="Entrar" Margin="60 10" Background="Gray" Foreground="White" Click="EntrarButton_Click"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Border CornerRadius="10" Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#7be9f6" Offset="0.0"/>
+                        <GradientStop Color="#f083da" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+
+            <StackPanel VerticalAlignment="Center">
+                <!--<Image Source="Images/House.png" Width="80"/>-->
+                <TextBlock Text="L O G I N"
+                           FontWeight="Light"
+                           FontFamily="helvetica"
+                           FontSize="22"
+                           Foreground="White"
+                           HorizontalAlignment="Center"/>
             </StackPanel>
-        </Border>
-        
-        
+
+
+
+            <StackPanel Grid.Row="1" >
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="UsuarioTexbox"
+                             FontFamily="Helvetica"
+                             FontWeight="Light"
+                             Text=""
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             Foreground="White"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Width="235"
+                             HorizontalContentAlignment="Left"
+                             Opacity="0.5"
+                             Height="25"
+                             Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="Account" 
+                                                VerticalAlignment="Center" 
+                                                HorizontalAlignment="Center" 
+                                                Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <PasswordBox 
+                             Name="PasswordBox"
+                             FontFamily="Helvetica"
+                             FontWeight="Light"
+                             Password=""
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             Foreground="White"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Width="235"
+                             HorizontalContentAlignment="Left"
+                             Opacity="0.5"
+                             Height="25"
+                             Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="TextboxPassword" 
+                                                VerticalAlignment="Center" 
+                                                HorizontalAlignment="Center" 
+                                                Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+                    <Button x:Name="EntrarButton" Width="100" Height="40" Content="LOGIN" Margin="140,0,60,0" Click="EntrarButton_Click"/>
+                    <!--<Button Width="100" Height="40" Content="REGISTER"/>-->
+                </StackPanel>
+
+            </StackPanel>
+
+
+
+
+
+
+        </Grid>
     </Grid>
 </Window>
