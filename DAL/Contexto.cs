@@ -9,6 +9,9 @@ namespace DataVentas.DAL
     public class Contexto : DbContext
     {
         public DbSet<Usuarios> Usuarios { get; set; }
+        public DbSet<Vendedores> Vendedores { get; set; }
+        public DbSet<Compras> Compras { get; set; }
+        public DbSet<Ventas> Ventas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
