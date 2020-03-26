@@ -18,6 +18,8 @@
     <None Remove="Resources\Eliminar.png" />
     <None Remove="Resources\Guardar.png" />
     <None Remove="Resources\j.png" />
+    <None Remove="Resources\LogoDataVentas.png" />
+    <None Remove="Resources\LogoDataVentasMayusculas.png" />
     <None Remove="Resources\Nuevo.png" />
     <None Remove="Resources\PagosCompras.png" />
     <None Remove="Resources\PagosVentas.png" />
@@ -55,6 +57,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\j.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\LogoDataVentas.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\LogoDataVentasMayusculas.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Nuevo.png">

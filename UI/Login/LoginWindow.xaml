@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DataVentas.UI.Login"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="380" ResizeMode="NoResize">
+        Title="Login" Height="450" Width="380" Background="Transparent" ResizeMode="NoResize">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -19,14 +19,15 @@
                 <Border.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#7be9f6" Offset="0.0"/>
-                        <GradientStop Color="#f083da" Offset="1"/>
+                        <GradientStop Color="DarkBlue" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
 
 
             <StackPanel VerticalAlignment="Center">
-                <!--<Image Source="Images/House.png" Width="80"/>-->
+                <Image Source="/Resources/logoDataVentas.png" Width="180"/>
+                
                 <TextBlock Text="L O G I N"
                            FontWeight="Light"
                            FontFamily="helvetica"
@@ -93,7 +94,7 @@
 
 
                 <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
-                    <Button x:Name="EntrarButton" Width="100" Height="40" Content="LOGIN" Margin="140,0,60,0" Click="EntrarButton_Click"/>
+                    <Button x:Name="EntrarButton" Width="100" Height="40" Content="E N T R A R " Margin="140,0,60,0" Click="EntrarButton_Click"/>
                     <!--<Button Width="100" Height="40" Content="REGISTER"/>-->
                 </StackPanel>
 

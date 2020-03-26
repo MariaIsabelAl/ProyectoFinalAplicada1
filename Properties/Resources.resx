@@ -148,6 +148,12 @@
   <data name="j" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\j.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="LogoDataVentas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoDataVentas.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LogoDataVentasMayusculas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoDataVentasMayusculas.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Nuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nuevo.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

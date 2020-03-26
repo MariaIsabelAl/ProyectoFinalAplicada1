@@ -163,6 +163,26 @@ namespace DataVentas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] LogoDataVentas {
+            get {
+                object obj = ResourceManager.GetObject("LogoDataVentas", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] LogoDataVentasMayusculas {
+            get {
+                object obj = ResourceManager.GetObject("LogoDataVentasMayusculas", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] Nuevo {
             get {
                 object obj = ResourceManager.GetObject("Nuevo", resourceCulture);
