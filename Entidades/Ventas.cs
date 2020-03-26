@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace DataVentas.Entidades
@@ -16,6 +17,9 @@ namespace DataVentas.Entidades
         public decimal Descuento { get; set; }
         public string Descripcion { get; set; }
 
+        [ForeignKey("VentaId")]
+        public virtual List<VentaDetalle> VentaDetalle { get; set; }
+
         public Ventas()
         {
             VentaId = 0;
@@ -23,8 +27,10 @@ namespace DataVentas.Entidades
             Precio = 0;
             Cantidad = 0;
             Total = 0;
-            Descuento = 0.0;
+            Descuento = 0;
             Descripcion = string.Empty;
+
+            VentaDetalle = new List<VentaDetalle>();
         }
     }
 }
