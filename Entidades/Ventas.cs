@@ -12,8 +12,8 @@ namespace DataVentas.Entidades
         public int UsuarioId { get; set; }
         public int Precio { get; set; }
         public int Cantidad { get; set; }
-        public int Total { get; set; }
-        public double Descuento { get; set; }
+        public decimal Total { get; set; }
+        public decimal Descuento { get; set; }
         public string Descripcion { get; set; }
 
         public Ventas()
