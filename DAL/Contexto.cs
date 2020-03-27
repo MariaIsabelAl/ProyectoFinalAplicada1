@@ -12,6 +12,10 @@ namespace DataVentas.DAL
         public DbSet<Vendedores> Vendedores { get; set; }
         public DbSet<Compras> Compras { get; set; }
         public DbSet<Ventas> Ventas { get; set; }
+        public DbSet<Productos> Productos { get; set; }
+        public DbSet<Clientes> Clientes { get; set; }
+        public DbSet<PagosVentas> PagosVentas { get; set; }
+        public DbSet<PagosCompras> PagosCompras { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

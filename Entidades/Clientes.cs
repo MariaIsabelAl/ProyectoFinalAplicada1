@@ -1,27 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace DataVentas.Entidades
 {
-    public class Vendedores
+    public class Clientes
     {
         [Key]
-        public int VendedorId { get; set; }
+        public int ClienteId { get; set; }
         public int UsuarioId { get; set; }
-        public int VentaId { get; set; }
         public string Nombre { get; set; }
         public string Email { get; set; }
         public string Telefono { get; set; }
         public string Cedula { get; set; }
         public string Direccion { get; set; }
 
-        public Vendedores()
+        public Clientes()
         {
-            VendedorId = 0;
+            ClienteId = 0;
             UsuarioId = 0;
-            VentaId = 0;
             Nombre = string.Empty;
             Email = string.Empty;
             Telefono = string.Empty;

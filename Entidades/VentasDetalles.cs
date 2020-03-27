@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DataVentas.Entidades
 {
-    public class VentaDetalle
+    public class VentasDetalles
     {
         [Key]
         public int VentaDetalleId { get; set; }
@@ -13,29 +13,32 @@ namespace DataVentas.Entidades
         public int ProductoId { get; set; }
         public int UsuarioId { get; set; }
         public int Cantidad { get; set; }
+        public string Descripcion { get; set; }
         public decimal Precio { get; set; }
         public decimal Total { get; set; }
-        public string Descripcion { get; set; }
+      
 
-        public VentaDetalle()
+        public VentasDetalles()
         {
             VentaDetalleId = 0;
             VentaId = 0;
             ProductoId = 0;
             UsuarioId = 0;
             Cantidad = 0;
+            Descripcion = string.Empty;
             Precio = 0;
             Total = 0;
-            Descripcion = string.Empty;
+            
 
         }
 
-        public VentaDetalle(int ventaid, int productoid, int cantidad, decimal precio, decimal total, string descripcion)
+        public VentasDetalles(int ventaid, int productoid, int cantidad, string descripcion, decimal precio, decimal total)
         {
             VentaDetalleId = 0;
             VentaId = ventaid;
             ProductoId = productoid;
             Cantidad = cantidad;
+            Descripcion = descripcion;
             Precio = precio;
             Total = total;
             Descripcion = descripcion;
