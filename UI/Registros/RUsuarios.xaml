@@ -41,10 +41,10 @@
             </Button>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="2">
-            <TextBlock Name="NombreLabel" Text="Nombre" Margin="30,5,5,5" Width="52" />
+            <TextBlock Name="NombreLabel" Text="Nombres" Margin="30,5,5,5" Width="52" />
             <TextBox Name="NombreTextBox" Margin="12,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="200">
                 <TextBox.Text>
-                    <Binding Path="Nombre" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding Path="Nombres" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
                             <ExceptionValidationRule/>
                         </Binding.ValidationRules>

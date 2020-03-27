@@ -9,7 +9,7 @@ namespace DataVentas.Entidades
     {
         [Key]
         public int UsuarioId { get; set; }
-        public string Nombre { get; set; }
+        public string Nombres { get; set; }
         public string NombreUsuario { get; set; }
         public string Email { get; set; }
         public string Clave { get; set; }
@@ -17,7 +17,7 @@ namespace DataVentas.Entidades
         public Usuarios()
         {
             UsuarioId = 0;
-            Nombre = string.Empty;
+            Nombres = string.Empty;
             NombreUsuario = string.Empty;
             Email = string.Empty;
             Clave = string.Empty;

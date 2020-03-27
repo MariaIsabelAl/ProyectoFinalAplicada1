@@ -26,7 +26,7 @@
 
 
             <StackPanel VerticalAlignment="Center">
-                <Image Source="/Resources/logoDataVentas.png" Width="180"/>
+                <Image Source="/Resources/logoDataVentas.png" Width="180" Height="151"/>
                 
                 <TextBlock Text="L O G I N"
                            FontWeight="Light"

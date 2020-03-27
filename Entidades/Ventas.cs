@@ -10,13 +10,18 @@ namespace DataVentas.Entidades
     {
         [Key]
         public int VentaId { get; set; }
-        public int UsuarioId { get; set; }
-        public int Cantidad { get; set; }
-        public string Descripcion { get; set; } 
-        public int Precio { get; set; }
+        public int VendedorId { get; set; }
+        public DateTime Fecha { get; set; }
+        public int ClienteId { get; set; }
+        public string TipoVenta { get; set; }
+        public string Efectivo { get; set; }
+        public string Tarjeta { get; set; }
+        public string Devuelta { get; set; }
+        public decimal Balance { get; set; }
         public decimal Total { get; set; }
         public decimal Descuento { get; set; }
-        
+        public int UsuarioId { get; set; }
+
 
         [ForeignKey("VentaId")]
         public virtual List<VentasDetalles> VentaDetalle { get; set; }
@@ -24,13 +29,17 @@ namespace DataVentas.Entidades
         public Ventas()
         {
             VentaId = 0;
-            UsuarioId = 0;
-            Cantidad = 0;
-            Descripcion = string.Empty;
-            Precio = 0;
+            VendedorId = 0;
+            Fecha = DateTime.Now;
+            ClienteId = 0;
+            TipoVenta = string.Empty;
+            Efectivo = string.Empty;
+            Tarjeta = string.Empty;
+            Devuelta = string.Empty;
+            Balance = 0;
             Total = 0;
             Descuento = 0;
-            
+            UsuarioId = 0;
 
             VentaDetalle = new List<VentasDetalles>();
         }

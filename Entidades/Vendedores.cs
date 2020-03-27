@@ -9,24 +9,24 @@ namespace DataVentas.Entidades
     {
         [Key]
         public int VendedorId { get; set; }
-        public int UsuarioId { get; set; }
-        public int VentaId { get; set; }
-        public string Nombre { get; set; }
+        public string Nombres { get; set; }
         public string Email { get; set; }
         public string Telefono { get; set; }
+        public string Celular { get; set; }
         public string Cedula { get; set; }
         public string Direccion { get; set; }
+        public int UsuarioId { get; set; }
 
         public Vendedores()
         {
             VendedorId = 0;
-            UsuarioId = 0;
-            VentaId = 0;
-            Nombre = string.Empty;
+            Nombres = string.Empty;
             Email = string.Empty;
             Telefono = string.Empty;
+            Celular = string.Empty;
             Cedula = string.Empty;
             Direccion = string.Empty;
+            UsuarioId = 0;
         }
     }
 }

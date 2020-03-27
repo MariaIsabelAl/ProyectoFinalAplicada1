@@ -38,7 +38,7 @@ namespace DataVentas.UI.Consultas
                             listado = UsuariosBll.GetList(p => p.UsuarioId == id);
                             break;
                         case 2://Nombre
-                            listado = UsuariosBll.GetList(p => p.Nombre.Contains(CriterioTextBox.Text));
+                            listado = UsuariosBll.GetList(p => p.Nombres.Contains(CriterioTextBox.Text));
                             break;
                         case 3://NombreUsuarios
                             listado = UsuariosBll.GetList(p => p.NombreUsuario.Contains(CriterioTextBox.Text));

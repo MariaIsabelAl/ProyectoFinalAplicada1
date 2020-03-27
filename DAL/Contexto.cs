@@ -22,7 +22,11 @@ namespace DataVentas.DAL
             optionsBuilder.UseSqlite(@"Data Source= DATA\DataVentas.db");
         }
 
-       
-        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Usuarios>().HasData(new Usuarios { UsuarioId = 1, Nombres = "Maria Isabel Alberto", NombreUsuario="MariaAl",Email="maria_alberto1@ucne.edu.do", Clave="maria2017" });
+           
+        }
+
     }
 }

@@ -11,11 +11,9 @@ namespace DataVentas.Entidades
         public int CompraDetalleId { get; set; }
         public int CompraId { get; set; }
         public int ProductoId { get; set; }
-        public int UsuarioId { get; set; }
         public int Cantidad { get; set; }
         public string Descripcion { get; set; }
         public decimal Precio { get; set; }
-        public decimal Total { get; set; }
 
 
         public ComprasDetalles()
@@ -23,25 +21,23 @@ namespace DataVentas.Entidades
             CompraDetalleId = 0;
             CompraId = 0;
             ProductoId = 0;
-            UsuarioId = 0;
             Cantidad = 0;
             Descripcion = string.Empty;
             Precio = 0;
-            Total = 0;
+
 
 
         }
 
-        public ComprasDetalles(int ventaid, int productoid, int cantidad, string descripcion, decimal precio, decimal total)
+        public ComprasDetalles(int Compraid, int productoid, int cantidad, string descripcion, decimal precio)
         {
             CompraDetalleId = 0;
-            CompraId = ventaid;
+            CompraId = Compraid;
             ProductoId = productoid;
             Cantidad = cantidad;
             Descripcion = descripcion;
             Precio = precio;
-            Total = total;
-            Descripcion = descripcion;
+           
         }
 
     }
