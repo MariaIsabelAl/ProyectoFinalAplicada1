@@ -7,9 +7,45 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" WindowState="Maximized">
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="\Resources\LogodataVentas.png" AlignmentX="Center" Stretch="Uniform" AlignmentY="Top"/>
-        </Grid.Background>
-        <Button Content="Probando" HorizontalAlignment="Left" Height="61" Margin="591,163,0,0" VerticalAlignment="Top" Width="156" Click="Button_Click"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#7be9f6" Offset="0.0"/>
+                        <GradientStop Color="DarkBlue" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+            <StackPanel VerticalAlignment="Center">
+                <Image Source="/Resources/logoDataVentas.png" Width="360" Height="302" Opacity="0.5"/>
+            </StackPanel>
+
+            <StackPanel>
+                <Menu>
+                    <MenuItem Header="Registros">
+                        <MenuItem x:Name="UsuarioMenutem" Header="Usuarios" Click="UsuarioMenutem_Click"/>
+                        <MenuItem Header="Productos" />
+                        <MenuItem Header="Clientes" />
+                        <MenuItem Header="Vendedores" />
+                        <Separator />
+                        <MenuItem Header="Salir" />
+                    </MenuItem>
+                    <MenuItem Header="Consultas">
+                        <MenuItem Header="nose"/>
+                        <MenuItem Header="lkdsfj"/>
+                        <MenuItem Header="lkdsjf"/>
+                    </MenuItem>
+                    <MenuItem Header="Reportes">
+                        <MenuItem Header="lksjfd"/>
+                    </MenuItem>
+                </Menu>
+                
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

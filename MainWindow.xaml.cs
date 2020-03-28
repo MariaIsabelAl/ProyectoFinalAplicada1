@@ -24,10 +24,10 @@ namespace DataVentas
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void UsuarioMenutem_Click(object sender, RoutedEventArgs e)
         {
-            RMenu rMenu = new RMenu();
-            rMenu.Show();
+            RUsuarios rusuarios = new RUsuarios();
+            rusuarios.Show();
         }
     }
 }
