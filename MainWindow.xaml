@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataVentas"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowState="Maximized">
     <Grid>
-        <Button Content="Probando" HorizontalAlignment="Left" Height="99" Margin="224,127,0,0" VerticalAlignment="Top" Width="287" Click="Button_Click"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="\Resources\LogodataVentas.png" AlignmentX="Center" Stretch="Uniform" AlignmentY="Top"/>
+        </Grid.Background>
+        <Button Content="Probando" HorizontalAlignment="Left" Height="61" Margin="591,163,0,0" VerticalAlignment="Top" Width="156" Click="Button_Click"/>
     </Grid>
 </Window>
