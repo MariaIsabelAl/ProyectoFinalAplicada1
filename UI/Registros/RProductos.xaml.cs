@@ -13,42 +13,43 @@ using DataVentas.BLL;
 using DataVentas.Entidades;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace DataVentas.UI.Registros
 {
     
-    public partial class RUsuarios : Window
+    public partial class RProductos : Window
     {
-        Usuarios usuarios = new Usuarios();
-        public RUsuarios()
+        Productos productos = new Productos();
+        public RProductos()
         {
             InitializeComponent();
-            this.DataContext = usuarios;
-            UsuarioIdTextBox.Text = "0";
+            this.DataContext = productos;
+            ProductoIdTextBox.Text = "0";
         }
 
         private void Limpiar()
         {
-            UsuarioIdTextBox.Text = "0";
-            NombreTextBox.Text = string.Empty;
-            NombreUsuarioTextBox.Text = string.Empty;
-            EmailTextBox.Text = string.Empty;
-            ClaveTextBox.Text = string.Empty;
-           
+            ProductoIdTextBox.Text = "0";
+            DescripcionTextBox.Text = string.Empty;
+            CantidadTextBox.Text =string.Empty;
+            precioTextBox.Text = string.Empty;
+            CostoTextBox.Text = string.Empty;
+            UsuarioIdTextBox.Text = string.Empty;
+
+
         }
 
-       
         private bool Existe()
         {
-            usuarios = UsuariosBll.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
-            return (usuarios != null);
+            productos = ProductosBll.Buscar(Convert.ToInt32(ProductoIdTextBox.Text));
+            return (productos != null);
         }
 
         private void Actualizar()
         {
             this.DataContext = null;
-            this.DataContext = usuarios;
+            this.DataContext = productos;
         }
+
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
         {
             Limpiar();
@@ -60,8 +61,8 @@ namespace DataVentas.UI.Registros
 
             Actualizar();
 
-            if (string.IsNullOrWhiteSpace(UsuarioIdTextBox.Text) || UsuarioIdTextBox.Text == "0")
-                paso = UsuariosBll.Guardar(usuarios);
+            if (string.IsNullOrWhiteSpace(ProductoIdTextBox.Text) || ProductoIdTextBox.Text == "0")
+                paso = ProductosBll.Guardar(productos);
             else
             {
                 if (!Existe())
@@ -69,7 +70,7 @@ namespace DataVentas.UI.Registros
                     MessageBox.Show("No Se puede Modificar porque no existe", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-                paso = UsuariosBll.Modificar(usuarios);
+                paso = ProductosBll.Modificar(productos);
             }
 
             if (paso)
@@ -86,28 +87,28 @@ namespace DataVentas.UI.Registros
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
             int id;
-            id = Convert.ToInt32(UsuarioIdTextBox.Text);
+            id = Convert.ToInt32(ProductoIdTextBox.Text);
 
             Limpiar();
 
-            if (UsuariosBll.Eliminar(id))
+            if (ProductosBll.Eliminar(id))
                 MessageBox.Show("Eliminado", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
             else
-                MessageBox.Show(UsuarioIdTextBox.Text, "No se puede eliminar una persona que no existe");
+                MessageBox.Show(ProductoIdTextBox.Text, "No se puede eliminar porque no existe");
         }
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            Usuarios anterior = UsuariosBll.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
+            Productos anterior = ProductosBll.Buscar(Convert.ToInt32(ProductoIdTextBox.Text));
 
             if (anterior != null)
             {
-                usuarios = anterior;
+                productos = anterior;
                 Actualizar();
             }
             else
             {
-                MessageBox.Show("Persona no Encontrada");
+                MessageBox.Show("No Encontrado");
 
             }
         }

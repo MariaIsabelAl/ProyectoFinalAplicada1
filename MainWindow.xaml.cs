@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DataVentas.UI.Registros;
+using DataVentas.UI.Consultas;
 
 namespace DataVentas
 {
@@ -28,6 +29,48 @@ namespace DataVentas
         {
             RUsuarios rusuarios = new RUsuarios();
             rusuarios.Show();
+        }
+
+        private void UsuariosConsultasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            UsuariosConsultas consultas = new UsuariosConsultas();
+            consultas.Show();
+        }
+
+        private void ProductosMenutem_Click(object sender, RoutedEventArgs e)
+        {
+            RProductos rProductos = new RProductos();
+            rProductos.Show();
+        }
+
+        private void ClientesMenutem_Click(object sender, RoutedEventArgs e)
+        {
+            RClientes rClientes = new RClientes();
+            rClientes.Show();
+        }
+
+        private void ComprasMenutem_Click(object sender, RoutedEventArgs e)
+        {
+            RCompras rCompras = new RCompras();
+            rCompras.Show();
+        }
+
+        private void ClientesConsutasMenutem_Click(object sender, RoutedEventArgs e)
+        {
+            ClientesConsultas consultas = new ClientesConsultas();
+            consultas.Show();
+        }
+
+        private void ProductosConsutasMenutem_Click(object sender, RoutedEventArgs e)
+        {
+            ProductosConsultas consultas = new ProductosConsultas();
+            consultas.Show();
+        }
+
+        private void ComprasConsutasMenutem_Click(object sender, RoutedEventArgs e)
+        {
+            ComprasConsultas consultas = new ComprasConsultas();
+            consultas.Show();
         }
     }
 }

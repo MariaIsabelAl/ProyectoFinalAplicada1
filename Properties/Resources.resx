@@ -121,6 +121,9 @@
   <data name="Agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Agregar.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Buscar.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Clientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Clientes.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -165,6 +168,9 @@
   </data>
   <data name="Proveedor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Proveedor.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Remover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Remover.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Usuarios.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

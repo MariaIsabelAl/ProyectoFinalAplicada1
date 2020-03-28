@@ -29,20 +29,28 @@
                 <Menu>
                     <MenuItem Header="Registros">
                         <MenuItem x:Name="UsuarioMenutem" Header="Usuarios" Click="UsuarioMenutem_Click"/>
-                        <MenuItem Header="Productos" />
-                        <MenuItem Header="Clientes" />
+                        <MenuItem x:Name="ProductosMenutem" Header="Productos" Click="ProductosMenutem_Click" />
+                        <MenuItem x:Name="ClientesMenutem" Header="Clientes" Click="ClientesMenutem_Click" />
                         <MenuItem Header="Vendedores" />
+                        <MenuItem Header="Ventas" />
+                        <MenuItem x:Name="ComprassMenutem"  Header="Compras" Click="ComprasMenutem_Click" />
+                        <MenuItem Header="Pagos de Ventas" />
+                        <MenuItem Header="Pagos de Compras" />
+
+
                         <Separator />
                         <MenuItem Header="Salir" />
                     </MenuItem>
                     <MenuItem Header="Consultas">
-                        <MenuItem Header="nose"/>
-                        <MenuItem Header="lkdsfj"/>
-                        <MenuItem Header="lkdsjf"/>
+                        <MenuItem x:Name="UsuarioConsutasMenutem" Header="Usuarios"  Click="UsuariosConsultasMenuItem_Click"/>
+                        <MenuItem x:Name="ClientesConsutasMenutem" Header="Cientes"  Click="ClientesConsutasMenutem_Click"/>
+                        <MenuItem x:Name="ProductosConsutasMenutem" Header="Productos" Click="ProductosConsutasMenutem_Click"/>
+                        <MenuItem x:Name="ComprasConsutasMenutem" Header="Compras" Click="ComprasConsutasMenutem_Click"/>
+
+                        <Separator />
+                        <MenuItem Header="Salir" />
                     </MenuItem>
-                    <MenuItem Header="Reportes">
-                        <MenuItem Header="lksjfd"/>
-                    </MenuItem>
+                    
                 </Menu>
                 
             </StackPanel>

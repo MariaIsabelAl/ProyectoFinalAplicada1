@@ -16,9 +16,7 @@ using DataVentas.Entidades;
 
 namespace DataVentas.UI.Login
 {
-    /// <summary>
-    /// Interaction logic for LoginWindow.xaml
-    /// </summary>
+   
     public partial class LoginWindow : Window 
     {
         List<Usuarios> lista = new List<Usuarios>();
