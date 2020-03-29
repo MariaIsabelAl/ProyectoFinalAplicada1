@@ -32,7 +32,7 @@
                         <MenuItem x:Name="ProductosMenutem" Header="Productos" Click="ProductosMenutem_Click" />
                         <MenuItem x:Name="ClientesMenutem" Header="Clientes" Click="ClientesMenutem_Click" />
                         <MenuItem x:Name="VendedoresMenuItem" Header="Vendedores" Click="VendedoresMenuItem_Click"/>
-                        <MenuItem Header="Ventas" />
+                        <MenuItem x:Name="VentasMenuItem" Header="Ventas" Click="VentasMenuItem_Click" />
                         <MenuItem x:Name="ComprassMenutem"  Header="Compras" Click="ComprasMenutem_Click" />
                         <MenuItem Header="Pagos de Ventas" />
                         <MenuItem Header="Pagos de Compras" />

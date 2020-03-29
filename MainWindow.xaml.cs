@@ -89,7 +89,13 @@ namespace DataVentas
         private void SalirAplicacion_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }   
+        }
+
+        private void VentasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            RVentas rVentas = new RVentas();
+            rVentas.Show();
+        }
     }
 }
 
