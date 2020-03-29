@@ -51,7 +51,7 @@ namespace DataVentas.UI.Login
                 UsuarioTexbox.Focus();
             }
 
-            Visibility = Visibility.Hidden;
+            this.Close();
         }
     }
 }
