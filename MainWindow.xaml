@@ -39,7 +39,7 @@
 
 
                         <Separator />
-                        <MenuItem Header="Salir" />
+                        <MenuItem x:Name="SalirAplicacion"  Header="Salir" Click="SalirAplicacion_Click"/>
                     </MenuItem>
                     <MenuItem Header="Consultas">
                         <MenuItem x:Name="UsuarioConsutasMenutem" Header="Usuarios"  Click="UsuariosConsultasMenuItem_Click"/>

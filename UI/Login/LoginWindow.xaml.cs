@@ -50,6 +50,8 @@ namespace DataVentas.UI.Login
                 PasswordBox.Password = string.Empty;
                 UsuarioTexbox.Focus();
             }
+
+            Visibility = Visibility.Hidden;
         }
     }
 }

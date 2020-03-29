@@ -17,7 +17,7 @@ using DataVentas.UI.Consultas;
 
 namespace DataVentas
 {
-    
+
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -85,5 +85,11 @@ namespace DataVentas
             VendedoresConsultas vendedoresConsulta = new VendedoresConsultas();
             vendedoresConsulta.Show();
         }
+
+        private void SalirAplicacion_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }   
     }
 }
+
