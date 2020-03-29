@@ -4,4 +4,4 @@ Bienvenidos a este proyeco, con este miniManual te ayudara a no cometer errores.
 
 **login**
 
-![image] (https://github.com/MariaIsabelAl/Imagenes/blob/master/Login.png)
+![image] (https://raw.githubusercontent.com/MariaIsabelAl/Imagenes/master/Login.png)
