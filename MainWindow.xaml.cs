@@ -96,6 +96,12 @@ namespace DataVentas
             RVentas rVentas = new RVentas();
             rVentas.Show();
         }
+
+        private void VentasConsultasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            VentasConsultas vConsultas = new VentasConsultas();
+            vConsultas.Show();
+        }
     }
 }
 
