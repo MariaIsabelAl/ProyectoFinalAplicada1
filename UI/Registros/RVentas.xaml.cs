@@ -86,19 +86,6 @@ namespace DataVentas.UI.Registros
             }
         }
 
-        private void EliminarButton_Click(object sender, RoutedEventArgs e)
-        {
-            int id;
-            id = Convert.ToInt32(VentasIdTextBox.Text);
-
-            Limpiar();
-
-            if (VentasBll.Eliminar(id))
-                MessageBox.Show("Eliminar", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
-            else
-                MessageBox.Show(VentasIdTextBox.Text, "No se puede eliminar porque no existe");
-        }
-
         private void RemoverButton_Click(object sender, RoutedEventArgs e)
         {
             ventas.VentaDetalle.RemoveAt(DetalleDataGrid.FrozenColumnCount);
@@ -130,6 +117,19 @@ namespace DataVentas.UI.Registros
             DescripcionTextBox.Clear();
             PrecioTextBox.Clear();
             productoIdTextBox.Focus();
+        }
+
+        private void EliminarButton_Click(object sender, RoutedEventArgs e)
+        {
+            int id;
+            id = Convert.ToInt32(VentasIdTextBox.Text);
+
+            Limpiar();
+
+            if (VentasBll.Eliminar(id))
+                MessageBox.Show("Eliminar", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+            else
+                MessageBox.Show(VentasIdTextBox.Text, "No se puede eliminar porque no existe");
         }
     }
 }
