@@ -72,5 +72,12 @@ namespace DataVentas
             ComprasConsultas consultas = new ComprasConsultas();
             consultas.Show();
         }
+
+        private void VendedoresMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            RVendedores rVendedores = new RVendedores();
+            rVendedores.Show();
+
+        }
     }
 }
