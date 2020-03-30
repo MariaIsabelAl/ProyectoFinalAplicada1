@@ -1,5 +1,11 @@
 # **Proyecto Final de Aplicada1/ DataVentas**
 
+# **Cronograma**
+
+<br>
+<img src="https://raw.githubusercontent.com/MariaIsabelAl/Imagenes/master/2020-03-30%20(10).png"
+<br>
+
 Bienvenidos a este proyecto, esta miniManual te ayudara a no cometer errores.
 
 # **login**
