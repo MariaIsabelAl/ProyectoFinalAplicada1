@@ -102,6 +102,18 @@ namespace DataVentas
             VentasConsultas vConsultas = new VentasConsultas();
             vConsultas.Show();
         }
+
+        private void PagosComprasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            RPagosCompras rPagosCompras = new RPagosCompras();
+            rPagosCompras.Show();
+        }
+
+        private void PagosComprasMenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            PagosComprasConsultas cPagosC = new PagosComprasConsultas();
+            cPagosC.Show();
+        }
     }
 }
 

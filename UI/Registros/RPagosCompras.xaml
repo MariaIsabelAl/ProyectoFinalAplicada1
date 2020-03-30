@@ -1,16 +1,15 @@
-﻿<Window x:Class="DataVentas.UI.Registros.RUsuarios"
+﻿<Window x:Class="DataVentas.UI.Registros.RPagosCompras"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataVentas.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro Usuarios" Height="220" Width="350">
-    <Grid x:Name="RUsuariosGrid" Height="200" Width="350">
+        Title="RPagosCompras" Height="300" Width="350">
+    <Grid Height="257">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition Width="Auto"  />
-            <ColumnDefinition Width="Auto"  />
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -24,10 +23,10 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal"  >
-            <TextBlock Name="UsuarioIdLabel" Text="UsuarioId" Margin="30,5,5,5" Width="53" />
-            <TextBox Name="UsuarioIdTextBox" Margin="12,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="66">
+            <TextBlock Name="PagoCompraIdLabel" Text="PagoCompraId" Margin="30,5,5,5" Width="80" />
+            <TextBox Name="PagoCompraIdTextBox" Margin="12,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="66">
                 <TextBox.Text>
-                    <Binding Path="UsuarioId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding Path="PagoCompraId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
                             <ExceptionValidationRule/>
                         </Binding.ValidationRules>
@@ -39,13 +38,13 @@
                     <ImageBrush ImageSource="/Resources/Buscar.png" Stretch="Uniform" AlignmentX="Left"/>
                 </Button.Background>
             </Button>
-            
+
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="2">
-            <TextBlock Name="NombreLabel" Text="Nombres" Margin="30,5,5,5" Width="52" />
-            <TextBox Name="NombreTextBox" Margin="12,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="200">
+            <TextBlock Name="CompraIdLabel" Text="CompraId" Margin="30,5,5,5" Width="52" />
+            <TextBox Name="CompraIdTextBox" Margin="40,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="181">
                 <TextBox.Text>
-                    <Binding Path="Nombres" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding Path="CompraId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
                             <ExceptionValidationRule/>
                         </Binding.ValidationRules>
@@ -53,23 +52,26 @@
                 </TextBox.Text>
             </TextBox>
         </StackPanel>
+        
         <StackPanel Orientation="Horizontal" Grid.Row="3">
-            <TextBlock Name="NombreUsuarioLabel" Text="Nombre Usuario" Margin="30,5,5,5" Width="101" />
-            <TextBox Name="NombreUsuarioTextBox" Margin="0,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="162">
-                <TextBox.Text>
-                    <Binding Path="NombreUsuario" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+            <TextBlock Name="FechaLabel" Text="Fecha" Margin="30,5,5,5" Width="50" />
+            <DatePicker Name="FechaDatePicker" Grid.Row="1" Grid.Column="1" Margin="40,5,5,5" Width="183">
+                <DatePicker.SelectedDate>
+                    <Binding Path="Fecha" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
                             <ExceptionValidationRule/>
                         </Binding.ValidationRules>
                     </Binding>
-                </TextBox.Text>
-            </TextBox>
+                </DatePicker.SelectedDate>
+            </DatePicker>
         </StackPanel>
+        
+        
         <StackPanel Orientation="Horizontal" Grid.Row="4">
-            <TextBlock Name="EmailLabel" Text="Email" Margin="30,5,5,5" Width="52" />
-            <TextBox Name="EmailTextBox" Margin="12,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="200">
+            <TextBlock Name="MontoLabel" Text="Monto" Margin="30,5,5,5" Width="77" />
+            <TextBox Name="MontoTextBox" Margin="12,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="184">
                 <TextBox.Text>
-                    <Binding Path="Email" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding Path="Monto" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
                             <ExceptionValidationRule/>
                         </Binding.ValidationRules>
@@ -77,11 +79,25 @@
                 </TextBox.Text>
             </TextBox>
         </StackPanel>
+        
         <StackPanel Orientation="Horizontal" Grid.Row="5">
-            <TextBlock Name="ClaveLabel" Text="Clave" Margin="30,5,5,5" Width="52" />
-            <TextBox Name="ClaveTextBox" Margin="12,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="200">
+            <TextBlock Name="DescuentoLabel" Text="Descuento" Margin="30,5,5,5" Width="77" />
+            <TextBox Name="DescuentoTextBox" Margin="12,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="184">
                 <TextBox.Text>
-                    <Binding Path="Clave" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding Path="Descuento" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                        <Binding.ValidationRules>
+                            <ExceptionValidationRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="6">
+            <TextBlock x:Name="UsuarioIdLabel" Text="UsuarioId" Margin="30,5,5,5" Width="82"/>
+            <TextBox x:Name="UsuarioIdTextBox" Margin="5,5,5,5" Height="22" Width="190">
+                <TextBox.Text>
+                    <Binding Path="UsuarioId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
                             <ExceptionValidationRule/>
                         </Binding.ValidationRules>
@@ -108,5 +124,6 @@
             </Button>
 
         </StackPanel>
+
     </Grid>
 </Window>

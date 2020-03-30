@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataVentas.BLL;
+using DataVentas.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -9,46 +11,45 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using DataVentas.BLL;
-using DataVentas.Entidades;
-using Microsoft.EntityFrameworkCore;
-
 
 namespace DataVentas.UI.Registros
 {
-    
-    public partial class RUsuarios : Window
+    /// <summary>
+    /// Interaction logic for RPagosCompras.xaml
+    /// </summary>
+    public partial class RPagosCompras : Window
     {
-        Usuarios usuarios = new Usuarios();
-        public RUsuarios()
+        PagosCompras pagoscompras = new PagosCompras();
+        public RPagosCompras()
         {
             InitializeComponent();
-            this.DataContext = usuarios;
-            UsuarioIdTextBox.Text = "0";
+            this.DataContext = pagoscompras;
+            PagoCompraIdTextBox.Text = "0";
         }
 
         private void Limpiar()
         {
+            PagoCompraIdTextBox.Text = "0";
+            CompraIdTextBox.Text = "0";
+            FechaDatePicker.SelectedDate = DateTime.Now;
+            MontoTextBox.Text = "0";
+            DescuentoTextBox.Text = "0";
             UsuarioIdTextBox.Text = "0";
-            NombreTextBox.Text = string.Empty;
-            NombreUsuarioTextBox.Text = string.Empty;
-            EmailTextBox.Text = string.Empty;
-            ClaveTextBox.Text = string.Empty;
-           
+            
         }
 
-       
         private bool Existe()
         {
-            usuarios = UsuariosBll.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
-            return (usuarios != null);
+            pagoscompras = PagosComprasBll.Buscar(Convert.ToInt32(PagoCompraIdTextBox.Text));
+            return (pagoscompras != null);
         }
 
         private void Actualizar()
         {
             this.DataContext = null;
-            this.DataContext = usuarios;
+            this.DataContext = pagoscompras;
         }
+
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
         {
             Limpiar();
@@ -57,10 +58,10 @@ namespace DataVentas.UI.Registros
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
             bool paso = false;
-            
 
-            if (string.IsNullOrWhiteSpace(UsuarioIdTextBox.Text) || UsuarioIdTextBox.Text == "0")
-                paso = UsuariosBll.Guardar(usuarios);
+
+            if (string.IsNullOrWhiteSpace(PagoCompraIdTextBox.Text) || PagoCompraIdTextBox.Text == "0")
+                paso = PagosComprasBll.Guardar(pagoscompras);
             else
             {
                 if (!Existe())
@@ -68,9 +69,9 @@ namespace DataVentas.UI.Registros
                     MessageBox.Show("No Se puede Modificar porque no existe", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-                paso = UsuariosBll.Modificar(usuarios);
+                paso = PagosComprasBll.Modificar(pagoscompras);
                 Actualizar();
-                
+
             }
 
             if (paso)
@@ -87,28 +88,29 @@ namespace DataVentas.UI.Registros
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
             int id;
-            id = Convert.ToInt32(UsuarioIdTextBox.Text);
+            id = Convert.ToInt32(PagoCompraIdTextBox.Text);
 
             Limpiar();
 
-            if (UsuariosBll.Eliminar(id))
+            if (PagosComprasBll.Eliminar(id))
                 MessageBox.Show("Eliminado", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
             else
-                MessageBox.Show(UsuarioIdTextBox.Text, "No se puede eliminar una persona que no existe");
+                MessageBox.Show(PagoCompraIdTextBox.Text, "No se puede eliminar una persona que no existe");
+
         }
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            Usuarios anterior = UsuariosBll.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
+            PagosCompras anterior = PagosComprasBll.Buscar(Convert.ToInt32(PagoCompraIdTextBox.Text));
 
             if (anterior != null)
             {
-                usuarios = anterior;
+                pagoscompras = anterior;
                 Actualizar();
             }
             else
             {
-                MessageBox.Show("Persona no Encontrada");
+                MessageBox.Show("Compra no Encontrada");
 
             }
         }
