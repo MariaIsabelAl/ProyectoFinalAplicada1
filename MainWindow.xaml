@@ -35,7 +35,7 @@
                         <MenuItem x:Name="VentasMenuItem" Header="Ventas" Click="VentasMenuItem_Click" />
                         <MenuItem x:Name="ComprassMenutem"  Header="Compras" Click="ComprasMenutem_Click" />
                         <MenuItem x:Name="PagosComprasMenuItem" Header="Pagos de Compras" Click="PagosComprasMenuItem_Click" />
-                        <MenuItem Header="Pagos de Ventas" />
+                        <MenuItem x:Name="PagosVentasMenuItem" Header="Pagos de Ventas" Click="PagosVentasMenuItem_Click" />
 
 
                         <Separator />
@@ -49,6 +49,7 @@
                         <MenuItem x:Name="ComprasConsutasMenutem" Header="Compras" Click="ComprasConsutasMenutem_Click"/>
                         <MenuItem x:Name="VentasConsultasMenuItem" Header="Ventas" Click="VentasConsultasMenuItem_Click"/>
                         <MenuItem x:Name="PagosComprasConsultaMenuItem" Header="Pagos Compras" Click="PagosComprasMenuItem_Click_1"/>
+                        <MenuItem x:Name="PagosVentasConsultasMenuItem" Header="Pagos Ventas" Click="PagosVentasConsultasMenuItem_Click"/>
                         <Separator />
                         <MenuItem Header="Salir" />
                     </MenuItem>
