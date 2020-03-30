@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace DataVentas.UI.Registros
 {
-    /// <summary>
-    /// Interaction logic for RPagosVentas.xaml
-    /// </summary>
+ 
     public partial class RPagosVentas : Window
     {
         PagosVentas pagosventas = new PagosVentas();
@@ -56,6 +54,13 @@ namespace DataVentas.UI.Registros
         {
             bool paso = false;
 
+            //Si todos los TexBoxes estan vacios, no te permite Guardar
+            if ((MontoTextBox.Text == "0"))
+            {
+                MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
 
             if (string.IsNullOrWhiteSpace(PagoVentaIdTextBox.Text) || PagoVentaIdTextBox.Text == "0")
                 paso = PagosVentasBll.Guardar(pagosventas);
@@ -70,6 +75,7 @@ namespace DataVentas.UI.Registros
                 Actualizar();
 
             }
+           
 
             if (paso)
             {

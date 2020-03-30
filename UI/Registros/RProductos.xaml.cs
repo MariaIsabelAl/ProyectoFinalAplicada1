@@ -30,10 +30,10 @@ namespace DataVentas.UI.Registros
         {
             ProductoIdTextBox.Text = "0";
             DescripcionTextBox.Text = string.Empty;
-            CantidadTextBox.Text =string.Empty;
-            precioTextBox.Text = string.Empty;
-            CostoTextBox.Text = string.Empty;
-            UsuarioIdTextBox.Text = string.Empty;
+            CantidadTextBox.Text ="0";
+            precioTextBox.Text = "0";
+            CostoTextBox.Text = "0";
+            UsuarioIdTextBox.Text = "0";
 
 
         }
@@ -59,7 +59,16 @@ namespace DataVentas.UI.Registros
         {
             bool paso = false;
 
-            Actualizar();
+            //Si todos los TexBoxes estan vacios, no te permite Guardar
+            if ((DescripcionTextBox.Text == string.Empty || CantidadTextBox.Text == "0" ||
+            precioTextBox.Text == "0"||
+            CostoTextBox.Text == "0"||
+            UsuarioIdTextBox.Text == "0"))
+            {
+
+                MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
 
             if (string.IsNullOrWhiteSpace(ProductoIdTextBox.Text) || ProductoIdTextBox.Text == "0")
                 paso = ProductosBll.Guardar(productos);
@@ -72,6 +81,8 @@ namespace DataVentas.UI.Registros
                 }
                 paso = ProductosBll.Modificar(productos);
             }
+
+           
 
             if (paso)
             {

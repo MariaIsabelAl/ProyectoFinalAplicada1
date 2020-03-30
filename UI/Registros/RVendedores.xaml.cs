@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace DataVentas.UI.Registros
 {
-    /// <summary>
-    /// Interaction logic for RVendedores.xaml
-    /// </summary>
+
     public partial class RVendedores : Window
     {
         Vendedores vendedores = new Vendedores();
@@ -61,7 +59,17 @@ namespace DataVentas.UI.Registros
         {
             bool paso = false;
 
-            Actualizar();
+            //Si todos los TexBoxes estan vacios, no te permite Guardar
+            if ((VededorNombreTextBox.Text == string.Empty || VendedorEmailTextBox.Text == string.Empty ||
+            VendedorTelefonoTextBox.Text == string.Empty ||
+            VendedorCelularTextBox.Text == string.Empty ||
+            VendedorCedulaTextBox.Text == string.Empty ||
+            VendedorDireccionTextBox.Text == string.Empty))
+            {
+
+                MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
 
             if (string.IsNullOrWhiteSpace(VendedorIdTextBox.Text) || VendedorIdTextBox.Text == "0")
                 paso = VendedoresBll.Guardar(vendedores);

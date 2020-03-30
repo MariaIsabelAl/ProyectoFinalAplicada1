@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataVentas.UI.Consultas"
         mc:Ignorable="d"
-        Title="VendedoresConsultas" Height="450" Width="800">
+        Title="Consultas Vendedores" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto">
@@ -35,7 +35,7 @@
         <TextBox x:Name="CriterioTextBox" HorizontalAlignment="Left" Height="22" Margin="302,5,0,0" Text=" " TextWrapping="Wrap" VerticalAlignment="Top" Width="181" />
         <Button x:Name="ConsultarButton" Content="Consultar" HorizontalAlignment="Left" Height="32" Margin="494,0,0,385" Width="183" FontWeight="Bold" Click="ConsultarButton_Click"   >
             <Button.Background>
-                <ImageBrush ImageSource="/Resources/ConsultarUsuarios.png" Stretch="Uniform" AlignmentX="Left"/>
+                <ImageBrush ImageSource="/Resources/ConsultarProveedor.png" Stretch="Uniform" AlignmentX="Left"/>
             </Button.Background>
         </Button>
         <DataGrid x:Name="ConsultaDataGrip" HorizontalAlignment="Left" Width="735"  Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Height="367" VerticalAlignment="Top" Margin="37,36,0,0" />
