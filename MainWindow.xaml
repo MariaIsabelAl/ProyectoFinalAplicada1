@@ -27,6 +27,9 @@
 
             <StackPanel>
                 <Menu>
+                    <MenuItem Header="Inicio">
+                        <MenuItem Name="SalirPrograma" Header="Salir" Click="SalirPrograma_Click" />
+                    </MenuItem>
                     <MenuItem Header="Registros">
                         <MenuItem x:Name="UsuarioMenutem" Header="Usuarios" Click="UsuarioMenutem_Click"/>
                         <MenuItem x:Name="ProductosMenutem" Header="Productos" Click="ProductosMenutem_Click" />
@@ -37,9 +40,6 @@
                         <MenuItem x:Name="PagosComprasMenuItem" Header="Pagos de Compras" Click="PagosComprasMenuItem_Click" />
                         <MenuItem x:Name="PagosVentasMenuItem" Header="Pagos de Ventas" Click="PagosVentasMenuItem_Click" />
 
-
-                        <Separator />
-                        <MenuItem x:Name="SalirAplicacion"  Header="Salir" Click="SalirAplicacion_Click"/>
                     </MenuItem>
                     <MenuItem Header="Consultas">
                         <MenuItem x:Name="UsuarioConsutasMenutem" Header="Usuarios"  Click="UsuariosConsultasMenuItem_Click"/>

@@ -40,6 +40,7 @@ namespace DataVentas.UI.Login
                     UsuarioId = item.UsuarioId;
                     m.Show();
                     paso = true;
+                    this.Close();
                     break;
                 }
             }
@@ -50,8 +51,6 @@ namespace DataVentas.UI.Login
                 PasswordBox.Password = string.Empty;
                 UsuarioTexbox.Focus();
             }
-
-            this.Close();
-        }
+        } 
     }
 }

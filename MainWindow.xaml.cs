@@ -86,11 +86,6 @@ namespace DataVentas
             vendedoresConsulta.Show();
         }
 
-        private void SalirAplicacion_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
         private void VentasMenuItem_Click(object sender, RoutedEventArgs e)
         {
             RVentas rVentas = new RVentas();
@@ -125,6 +120,11 @@ namespace DataVentas
         {
             PagosVentasConsultas pVentasC = new PagosVentasConsultas();
             pVentasC.Show();
+        }
+
+        private void SalirPrograma_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
