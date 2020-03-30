@@ -50,8 +50,6 @@
                         <MenuItem x:Name="VentasConsultasMenuItem" Header="Ventas" Click="VentasConsultasMenuItem_Click"/>
                         <MenuItem x:Name="PagosComprasConsultaMenuItem" Header="Pagos Compras" Click="PagosComprasMenuItem_Click_1"/>
                         <MenuItem x:Name="PagosVentasConsultasMenuItem" Header="Pagos Ventas" Click="PagosVentasConsultasMenuItem_Click"/>
-                        <Separator />
-                        <MenuItem Header="Salir" />
                     </MenuItem>
                     
                 </Menu>
