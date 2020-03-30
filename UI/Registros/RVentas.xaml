@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataVentas.UI.Registros"
+        xmlns:m="clr-namespace:DataVentas.Validaciones"
         mc:Ignorable="d"
         Title="RVentas" Height="500" Width="420">
     <Grid>
@@ -78,7 +79,7 @@
             <TextBox x:Name="DevueltaTextBox"  Foreground="Blue" Width="67" Margin="10,1,0,2">
                 <Binding Path="Devuelta" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                     <Binding.ValidationRules>
-                        <ExceptionValidationRule/>
+                        <m:ValidacionCompleta x:Name="ValidacionDevuelta" ValidatesOnTargetUpdated="True"/>
                     </Binding.ValidationRules>
                 </Binding>
             </TextBox>
@@ -134,7 +135,7 @@
                 <TextBox.Text>
                     <Binding Path="ProductoId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <ExceptionValidationRule/>
+                            <m:ValidacionCompleta x:Name="ValidacionProductoId" ValidatesOnTargetUpdated="True"/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>
@@ -144,7 +145,7 @@
                 <TextBox.Text>
                     <Binding Path="Cantidad" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <ExceptionValidationRule/>
+                            <m:ValidacionCompleta x:Name="ValidacionCantidad" ValidatesOnTargetUpdated="True"/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>
@@ -156,7 +157,7 @@
                 <TextBox.Text>
                     <Binding Path="Descripcion" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <ExceptionValidationRule/>
+                            <m:ValidacionCompleta x:Name="ValidacionDescripcion" ValidatesOnTargetUpdated="True"/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>
@@ -166,7 +167,7 @@
                 <TextBox.Text>
                     <Binding Path="Precio" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <ExceptionValidationRule/>
+                            <m:ValidacionCompleta x:Name="ValidacionPrecio" ValidatesOnTargetUpdated="True"/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>

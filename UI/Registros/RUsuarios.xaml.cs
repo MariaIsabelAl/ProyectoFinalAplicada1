@@ -74,13 +74,14 @@ namespace DataVentas.UI.Registros
                 
             }
 
+            //Si todos los TexBoxes estan vacios, no te permite Guardar
             if ((NombreTextBox.Text == string.Empty || NombreUsuarioTextBox.Text == string.Empty || EmailTextBox.Text == string.Empty || ClaveTextBox.Text == string.Empty))
             {
                 MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-
+            
             if (paso)
             {
                 Limpiar();

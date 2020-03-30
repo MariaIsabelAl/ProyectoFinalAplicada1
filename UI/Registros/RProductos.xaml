@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataVentas.UI.Registros"
+        xmlns:m="clr-namespace:DataVentas.Validaciones"
         mc:Ignorable="d"
         Title="Registro Productos" Height="230" Width="350">
     <Grid x:Name="RProductosGrid">
@@ -48,7 +49,7 @@
                 <TextBox.Text>
                     <Binding Path="Descripcion" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <ExceptionValidationRule/>
+                            <m:ValidacionCompleta x:Name="ValidacionDescripcion" ValidatesOnTargetUpdated="True"/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>

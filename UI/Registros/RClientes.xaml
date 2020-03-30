@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataVentas.UI.Registros"
+        xmlns:m="clr-namespace:DataVentas.Validaciones"
         mc:Ignorable="d"
         Title="Registro Clientes" Height="290" Width="350">
     <Grid x:Name="RClientesGrid" Height="290" Width="350">
@@ -46,7 +47,7 @@
                 <TextBox.Text>
                     <Binding Path="Nombres" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <ExceptionValidationRule/>
+                            <m:ValidacionCompleta x:Name="ValidacionNombres" ValidatesOnTargetUpdated="True"/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>
@@ -58,7 +59,7 @@
                 <TextBox.Text>
                     <Binding Path="Email" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <ExceptionValidationRule/>
+                            <m:ValidacionCompleta x:Name="ValidacionEmail" ValidatesOnTargetUpdated="True"/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>
@@ -69,7 +70,7 @@
             <TextBox x:Name="TelefonoTextBox"  Foreground="Blue" Width="172">
                 <Binding Path="Telefono" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                     <Binding.ValidationRules>
-                        <ExceptionValidationRule/>
+                        <m:ValidacionCompleta x:Name="ValidacionTelefono" ValidatesOnTargetUpdated="True"/>
                     </Binding.ValidationRules>
                 </Binding>
             </TextBox>
@@ -79,7 +80,7 @@
             <TextBox x:Name="CelularTextBox"  Foreground="Blue" Width="172">
                 <Binding Path="Celular" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                     <Binding.ValidationRules>
-                        <ExceptionValidationRule/>
+                        <m:ValidacionCompleta x:Name="ValidacionCelular" ValidatesOnTargetUpdated="True"/>
                     </Binding.ValidationRules>
                 </Binding>
             </TextBox>
@@ -89,7 +90,7 @@
             <TextBox x:Name="CedulaTextBox" Margin="10,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="216" Height="29" >
                 <Binding Path="Cedula" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                     <Binding.ValidationRules>
-                        <ExceptionValidationRule/>
+                        <m:ValidacionCompleta x:Name="ValidacionCedula" ValidatesOnTargetUpdated="True"/>
                     </Binding.ValidationRules>
                 </Binding>
             </TextBox>
@@ -100,7 +101,7 @@
                 <TextBox.Text>
                     <Binding Path="Direccion" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <ExceptionValidationRule/>
+                            <m:ValidacionCompleta x:Name="ValidacionDireccion" ValidatesOnTargetUpdated="True"/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>
