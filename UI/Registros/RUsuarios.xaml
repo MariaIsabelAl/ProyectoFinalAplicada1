@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataVentas.UI.Registros"
+        xmlns:m="clr-namespace:DataVentas.Validaciones"
         mc:Ignorable="d"
         Title="Registro Usuarios" Height="220" Width="350">
     <Grid x:Name="RUsuariosGrid" Height="200" Width="350">
@@ -47,7 +48,7 @@
                 <TextBox.Text>
                     <Binding Path="Nombres" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <ExceptionValidationRule/>
+                            <m:ValidacionCompleta x:Name="ValidacionNombre" ValidatesOnTargetUpdated="True"/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>
@@ -59,7 +60,7 @@
                 <TextBox.Text>
                     <Binding Path="NombreUsuario" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <ExceptionValidationRule/>
+                            <m:ValidacionCompleta x:Name="ValidacionNombreUsuario" ValidatesOnTargetUpdated="True"/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>
@@ -71,7 +72,7 @@
                 <TextBox.Text>
                     <Binding Path="Email" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <ExceptionValidationRule/>
+                            <m:ValidacionCompleta x:Name="ValidacionEmail" ValidatesOnTargetUpdated="True"/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>
@@ -83,7 +84,7 @@
                 <TextBox.Text>
                     <Binding Path="Clave" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <ExceptionValidationRule/>
+                            <m:ValidacionCompleta x:Name="ValidacionClave" ValidatesOnTargetUpdated="True"/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>

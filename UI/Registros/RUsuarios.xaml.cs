@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DataVentas.BLL;
 using DataVentas.Entidades;
+using DataVentas.Validaciones;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -72,6 +73,13 @@ namespace DataVentas.UI.Registros
                 Actualizar();
                 
             }
+
+            if ((NombreTextBox.Text == string.Empty || NombreUsuarioTextBox.Text == string.Empty || EmailTextBox.Text == string.Empty || ClaveTextBox.Text == string.Empty))
+            {
+                MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
 
             if (paso)
             {
