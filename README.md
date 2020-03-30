@@ -53,7 +53,34 @@ Este nos permite acceder a nuestros distintos registros y consultas.
 Este registros nos permite comprar un producto, de esta manera debemos tener ya agregado nuestros productos en la tabla Productos.
 
 
+**Este es el de ventas**
 
+<br>
+<img src="https://raw.githubusercontent.com/MariaIsabelAl/Imagenes/master/2020-03-30%20(8).png"
+<br>
+
+
+
+**Este es el de Vendedores**
+
+<br>
+<img src="https://github.com/MariaIsabelAl/Imagenes/blob/master/2020-03-30%20(3).png"
+<br>
+
+
+
+**Este es el de Pagos de Ventas**
+
+<br>
+<img src="https://github.com/MariaIsabelAl/Imagenes/blob/master/2020-03-30%20(6).png"
+<br>
+
+
+**Este es el de Pagos de Compras**
+
+<br>
+<img src="https://github.com/MariaIsabelAl/Imagenes/blob/master/2020-03-30%20(5).png"
+<br>
 
 
 
