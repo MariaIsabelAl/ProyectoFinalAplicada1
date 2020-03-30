@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataVentas", "DataVentas.csproj", "{87BD9679-46C1-4E99-87EB-853A9991C1A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataVentas", "DataVentas.csproj", "{87BD9679-46C1-4E99-87EB-853A9991C1A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataVentasTests", "..\DataVentasTests\DataVentasTests.csproj", "{0C1F1801-EDDC-4C37-A519-88134FD13A02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{87BD9679-46C1-4E99-87EB-853A9991C1A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87BD9679-46C1-4E99-87EB-853A9991C1A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87BD9679-46C1-4E99-87EB-853A9991C1A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C1F1801-EDDC-4C37-A519-88134FD13A02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C1F1801-EDDC-4C37-A519-88134FD13A02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C1F1801-EDDC-4C37-A519-88134FD13A02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C1F1801-EDDC-4C37-A519-88134FD13A02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
