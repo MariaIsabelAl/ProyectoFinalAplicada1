@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataVentas.UI.Registros"
         mc:Ignorable="d"
-        Title="RPagosVentas" Height="300" Width="400">
+        Title="Pagos Ventas" Height="300" Width="400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
@@ -96,7 +96,7 @@
 
         <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="6">
             <TextBlock x:Name="UsuarioIdLabel" Text="UsuarioId" Margin="30,5,5,5" Width="82"/>
-            <TextBox x:Name="UsuarioIdTextBox" Margin="5,5,5,5" Height="22" Width="190">
+            <TextBox x:Name="UsuarioIdTextBox" Margin="5,5,5,5" Height="22" Width="190" Foreground="Blue">
                 <TextBox.Text>
                     <Binding Path="UsuarioId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DataVentas.UI.Registros"
         xmlns:m="clr-namespace:DataVentas.Validaciones"
         mc:Ignorable="d"
-        Title="RVentas" Height="500" Width="420">
+        Title="Registro Ventas" Height="500" Width="420">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -60,7 +60,7 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="3">
             <TextBlock Name="TipoVentasLabel" Text="Tipo Venta" Margin="30,5,5,5" Width="85" />
-            <ComboBox x:Name="TipoVentaComboBox" Width="233">
+            <ComboBox x:Name="TipoVentaComboBox" Width="119">
                 <ComboBoxItem>
                     <Binding Path="TipoVenta" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
@@ -71,12 +71,20 @@
                 <ComboBoxItem Content="Contado"/>
                 <ComboBoxItem Content="Credito"/>
             </ComboBox>
+            <TextBlock Name="VendedorIdLabel" Text="VendedorId" Margin="2,5,5,5" Width="72" />
+            <TextBox x:Name="VendedorIdTextBox"  Foreground="Blue" Width="60" Margin="0,1,0,2">
+                <Binding Path="VendedorId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="4">
             <CheckBox Margin="60,10,5,5" Content="Efectivo" ClickMode="Press"/>
             <CheckBox Margin="20,10,5,5" Content="Tarjeta" ClickMode="Press"/>
             <TextBlock Name="DevueltaLabel" Text="Devuelta" Margin="15,10,5,5" Width="47" />
-            <TextBox x:Name="DevueltaTextBox"  Foreground="Blue" Width="67" Margin="10,1,0,2">
+            <TextBox x:Name="DevueltaTextBox"  Foreground="Blue" Width="67" Margin="10,1,0,2" Height="23">
                 <Binding Path="Devuelta" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                     <Binding.ValidationRules>
                         <m:ValidacionCompleta x:Name="ValidacionDevuelta" ValidatesOnTargetUpdated="True"/>
@@ -86,8 +94,8 @@
 
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="5">
-            <TextBlock Name="TotaLabel" Text="Total" Margin="30,5,5,5" Width="87" />
-            <TextBox Name="TotaTextBox" Margin="0,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="189">
+            <TextBlock Name="TotaLabel" Text="Monto" Margin="30,5,5,5" Width="87" />
+            <TextBox Name="TotaTextBox" Margin="0,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="84">
                 <TextBox.Text>
                     <Binding Path="Total" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
@@ -96,10 +104,18 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
+            <TextBlock Name="ClienteIdLabel" Text="ClienteId" Margin="10,5,5,5" Width="57" />
+            <TextBox x:Name="ClienteIdTextBox"  Foreground="Blue" Width="60" Margin="10,1,0,2">
+                <Binding Path="ClienteId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="6">
             <TextBlock Name="BalanceLabel" Text="Balance" Margin="30,5,5,5" Width="87" />
-            <TextBox Name="BalanceTextBox" Margin="0,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="163">
+            <TextBox Name="BalanceTextBox" Margin="0,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="162">
                 <TextBox.Text>
                     <Binding Path="Balance" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>

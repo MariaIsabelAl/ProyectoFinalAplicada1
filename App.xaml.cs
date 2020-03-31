@@ -13,5 +13,10 @@ namespace DataVentas
     /// </summary>
     public partial class App : Application
     {
+        private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            MessageBox.Show($"Ocurrio un error no controlado:\n {e.Exception.Message}");
+            e.Handled = true;
+        }
     }
 }

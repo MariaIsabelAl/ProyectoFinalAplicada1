@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DataVentas.UI.Registros"
         xmlns:m="clr-namespace:DataVentas.Validaciones"
         mc:Ignorable="d"
-        Title="RVendedores" Height="300" Width="400">
+        Title="Resgistro Vendedores" Height="300" Width="400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />

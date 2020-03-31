@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace DataVentas.UI.Registros
 {
-    /// <summary>
-    /// Interaction logic for RVentas.xaml
-    /// </summary>
+  
     public partial class RVentas : Window
     {
         Ventas ventas = new Ventas(); 
@@ -32,6 +30,8 @@ namespace DataVentas.UI.Registros
             VentasIdTextBox.Text = "0";
             FechaDatePickerTextBox.SelectedDate = DateTime.Now;
             TipoVentaComboBox.SelectedItem = string.Empty;
+            VendedorIdTextBox.Text = "0";
+            ClienteIdTextBox.Text = "0";
             DevueltaTextBox.Text = "0";
             TotaTextBox.Text = "0";
             BalanceTextBox.Text = "0";
@@ -63,6 +63,17 @@ namespace DataVentas.UI.Registros
         {
             bool paso = false;
 
+            //Si todos los TexBoxes estan vacios, no te permite Guardar
+            if ((VendedorIdTextBox.Text == "0" ||
+            ClienteIdTextBox.Text == "0" ||
+            DevueltaTextBox.Text == "0" ||
+            TotaTextBox.Text == "0" ||
+            BalanceTextBox.Text == "0" || UsuarioIdTextBox.Text == "0"))
+            {
+                MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             if (string.IsNullOrWhiteSpace(VentasIdTextBox.Text) || VentasIdTextBox.Text == "0")
                 paso = VentasBll.Guardar(ventas);
             else
@@ -74,6 +85,7 @@ namespace DataVentas.UI.Registros
                 }
                 paso = VentasBll.Modificar(ventas);
             }
+
 
             if (paso)
             {
