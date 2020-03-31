@@ -79,7 +79,7 @@
             <TextBox x:Name="DevueltaTextBox"  Foreground="Blue" Width="67" Margin="10,1,0,2">
                 <Binding Path="Devuelta" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                     <Binding.ValidationRules>
-                        <ExceptionValidationRule/>
+                        <m:ValidacionCompleta x:Name="ValidacionDevuelta" ValidatesOnTargetUpdated="True"/>
                     </Binding.ValidationRules>
                 </Binding>
             </TextBox>
@@ -135,7 +135,7 @@
                 <TextBox.Text>
                     <Binding Path="ProductoId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <ExceptionValidationRule/>
+                            <m:ValidacionCompleta x:Name="ValidacionProductoId" ValidatesOnTargetUpdated="True"/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>
@@ -145,7 +145,7 @@
                 <TextBox.Text>
                     <Binding Path="Cantidad" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <ExceptionValidationRule/>
+                            <m:ValidacionCompleta x:Name="ValidacionCantidad" ValidatesOnTargetUpdated="True"/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>
@@ -167,7 +167,7 @@
                 <TextBox.Text>
                     <Binding Path="Precio" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <ExceptionValidationRule/>
+                            <m:ValidacionCompleta x:Name="ValidacionPrecio" ValidatesOnTargetUpdated="True"/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>

@@ -94,7 +94,7 @@
 
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="5">
-            <TextBlock Name="TotaLabel" Text="Total" Margin="30,5,5,5" Width="87" />
+            <TextBlock Name="TotaLabel" Text="Monto" Margin="30,5,5,5" Width="87" />
             <TextBox Name="TotaTextBox" Margin="0,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="84">
                 <TextBox.Text>
                     <Binding Path="Total" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
