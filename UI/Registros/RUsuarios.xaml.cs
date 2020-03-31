@@ -58,8 +58,8 @@ namespace DataVentas.UI.Registros
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
             bool paso = false;
-            
 
+            Actualizar();
             if (string.IsNullOrWhiteSpace(UsuarioIdTextBox.Text) || UsuarioIdTextBox.Text == "0")
                 paso = UsuariosBll.Guardar(usuarios);
             else
@@ -70,8 +70,7 @@ namespace DataVentas.UI.Registros
                     return;
                 }
                 paso = UsuariosBll.Modificar(usuarios);
-                Actualizar();
-                
+               
             }
 
             //Si todos los TexBoxes estan vacios, no te permite Guardar
