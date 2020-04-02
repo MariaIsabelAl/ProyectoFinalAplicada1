@@ -73,6 +73,8 @@ namespace DataVentas.UI.Registros
                 MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+
+            
             
             if (string.IsNullOrWhiteSpace(VentasIdTextBox.Text) || VentasIdTextBox.Text == "0")
                 paso = VentasBll.Guardar(ventas);
@@ -85,7 +87,7 @@ namespace DataVentas.UI.Registros
                 }
                 paso = VentasBll.Modificar(ventas);
             }
-
+            Actualizar();
 
             if (paso)
             {
