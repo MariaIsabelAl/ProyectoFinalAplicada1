@@ -24,8 +24,7 @@ namespace DataVentas.Entidades
             Cantidad = 0;
             Descripcion = string.Empty;
             Precio = 0;
-          
-            
+            Total = 0;
 
         }
 
@@ -37,8 +36,8 @@ namespace DataVentas.Entidades
             Cantidad = cantidad;
             Descripcion = descripcion;
             Precio = precio;
-           
-           
+            Total = cantidad * precio;
+            
         }
         
     }

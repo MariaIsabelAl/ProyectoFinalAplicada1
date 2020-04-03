@@ -109,6 +109,7 @@ namespace DataVentas.UI.Registros
 
         private void AgregarButton_Click(object sender, RoutedEventArgs e)
         {
+           
             ventas.VentaDetalle.Add(new VentasDetalles
                 (Convert.ToInt32(VentasIdTextBox.Text), 
                 Convert.ToInt32(productoIdTextBox.Text), 

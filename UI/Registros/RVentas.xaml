@@ -1,4 +1,4 @@
-﻿    <Window x:Class="DataVentas.UI.Registros.RVentas"
+﻿<Window x:Class="DataVentas.UI.Registros.RVentas"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DataVentas.UI.Registros"
         xmlns:m="clr-namespace:DataVentas.Validaciones"
         mc:Ignorable="d"
-        Title="Registro Ventas" Height="500" Width="420">
+        Title="Registro Ventas" Height="500" Width="450">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
