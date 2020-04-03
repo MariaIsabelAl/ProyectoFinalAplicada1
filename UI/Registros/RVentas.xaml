@@ -195,7 +195,8 @@
             </Button>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="11">
-            <DataGrid x:Name="DetalleDataGrid" Grid.Row="11" Height="173" Width="356" Margin="25,0,0,0" >
+            <DataGrid x:Name="DetalleDataGrid" Grid.Row="11" Height="173" Width="356" Margin="25,0,0,0">
+                
                 <DataGrid.ItemsSource>
                     <Binding Path="VentaDetalle" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay"/>
                 </DataGrid.ItemsSource>

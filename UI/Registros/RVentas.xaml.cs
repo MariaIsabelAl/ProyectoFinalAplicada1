@@ -14,16 +14,20 @@ using System.Windows.Shapes;
 
 namespace DataVentas.UI.Registros
 {
+
   
     public partial class RVentas : Window
     {
-        Ventas ventas = new Ventas(); 
+        Ventas ventas = new Ventas();
+        VentasDetalles ventasdetalles = new VentasDetalles();
+
         public RVentas()
         {
             InitializeComponent();
             this.DataContext = ventas;
             VentasIdTextBox.Text = "0";
         }
+
 
         private void Limpiar()
         {
@@ -39,7 +43,6 @@ namespace DataVentas.UI.Registros
             UsuarioIdTextBox.Text = "0";
 
             DetalleDataGrid.ItemsSource = new List<VentasDetalles>();
-            
         }
 
         private void Actualizar()
@@ -51,6 +54,7 @@ namespace DataVentas.UI.Registros
         private bool Existe()
         {
             Ventas ventaA = VentasBll.Buscar(ventas.VentaId);
+            //ventas = VentasBll.Buscar(Convert.ToInt32(VentasIdTextBox.Text));
             return (ventas != null);
         }
 
@@ -109,7 +113,6 @@ namespace DataVentas.UI.Registros
 
         private void AgregarButton_Click(object sender, RoutedEventArgs e)
         {
-           
             ventas.VentaDetalle.Add(new VentasDetalles
                 (Convert.ToInt32(VentasIdTextBox.Text), 
                 Convert.ToInt32(productoIdTextBox.Text), 
