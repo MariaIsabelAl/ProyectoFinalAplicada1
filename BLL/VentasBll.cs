@@ -63,11 +63,12 @@ namespace DataVentas.BLL
 
             try
             {
-                contexto.Database.ExecuteSqlRaw($"Delete FROM VentasDetalles Where VentaId={ventas.VentaId}");
+                contexto.Database.ExecuteSqlRaw($"DELETE FROM VentasDetalles Where VentaId = {ventas.VentaId}");
                 foreach (var anterior in ventas.VentaDetalle)
                 {
                     contexto.Entry(anterior).State = EntityState.Added;
                 }
+                
                 contexto.Entry(ventas).State = EntityState.Modified;
                 paso = (contexto.SaveChanges() > 0);
             }

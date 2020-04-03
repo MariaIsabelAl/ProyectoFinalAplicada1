@@ -62,20 +62,7 @@ namespace DataVentas.UI.Registros
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
             bool paso = false;
-
-            //Si todos los TexBoxes estan vacios, no te permite Guardar
-            if ((VendedorIdTextBox.Text == "0" ||
-            ClienteIdTextBox.Text == "0" ||
-            DevueltaTextBox.Text == "0" ||
-            TotaTextBox.Text == "0" ||
-            BalanceTextBox.Text == "0" || UsuarioIdTextBox.Text == "0"))
-            {
-                MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-
-            
-            
+ 
             if (string.IsNullOrWhiteSpace(VentasIdTextBox.Text) || VentasIdTextBox.Text == "0")
                 paso = VentasBll.Guardar(ventas);
             else
@@ -87,12 +74,11 @@ namespace DataVentas.UI.Registros
                 }
                 paso = VentasBll.Modificar(ventas);
             }
-            Actualizar();
 
             if (paso)
             {
-                Limpiar();
                 MessageBox.Show("Guardado!!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+                Limpiar();
             }
             else
             {
@@ -123,8 +109,13 @@ namespace DataVentas.UI.Registros
 
         private void AgregarButton_Click(object sender, RoutedEventArgs e)
         {
-            ventas.VentaDetalle.Add(new VentasDetalles(Convert.ToInt32(VentasIdTextBox.Text), Convert.ToInt32(productoIdTextBox.Text), Convert.ToInt32(CantidadTextBox.Text),
-                DescripcionTextBox.Text, Convert.ToInt32(PrecioTextBox.Text)));
+            ventas.VentaDetalle.Add(new VentasDetalles
+                (Convert.ToInt32(VentasIdTextBox.Text), 
+                Convert.ToInt32(productoIdTextBox.Text), 
+                Convert.ToInt32(CantidadTextBox.Text),
+                DescripcionTextBox.Text, 
+                Convert.ToInt32(PrecioTextBox.Text)));
+
             Actualizar();
             productoIdTextBox.Clear();
             CantidadTextBox.Clear();

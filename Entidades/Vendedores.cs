@@ -28,5 +28,17 @@ namespace DataVentas.Entidades
             Direccion = string.Empty;
             UsuarioId = 0;
         }
+
+        public Vendedores(int vendedorid, string nombres, string email, string telefono, string celular, string cedula, string direccion, int usuarioid)
+        {
+            VendedorId = vendedorid;
+            Nombres = nombres;
+            Email = email;
+            Telefono = telefono;
+            Celular = celular;
+            Cedula = cedula;
+            Direccion = direccion;
+            UsuarioId = usuarioid;
+        }
     }
 }
