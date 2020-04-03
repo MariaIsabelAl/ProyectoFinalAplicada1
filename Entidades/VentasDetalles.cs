@@ -36,7 +36,7 @@ namespace DataVentas.Entidades
             Cantidad = cantidad;
             Descripcion = descripcion;
             Precio = precio;
-            Total = cantidad * precio;
+            Total = cantidad + precio;
             
         }
         
