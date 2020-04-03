@@ -218,10 +218,10 @@ namespace DataVentas.Migrations
                         new
                         {
                             UsuarioId = 1,
-                            Clave = "maria2017",
-                            Email = "maria_alberto1@ucne.edu.do",
-                            NombreUsuario = "MariaAl",
-                            Nombres = "Maria Isabel Alberto"
+                            Clave = "admin",
+                            Email = "admin@ucne.edu.do",
+                            NombreUsuario = "admin",
+                            Nombres = "Admin"
                         });
                 });
 

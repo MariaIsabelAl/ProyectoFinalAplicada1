@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataVentas.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20200327210036_DataVentas")]
-    partial class DataVentas
+    [Migration("20200403054137_inicial")]
+    partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -220,10 +220,10 @@ namespace DataVentas.Migrations
                         new
                         {
                             UsuarioId = 1,
-                            Clave = "maria2017",
-                            Email = "maria_alberto1@ucne.edu.do",
-                            NombreUsuario = "MariaAl",
-                            Nombres = "Maria Isabel Alberto"
+                            Clave = "admin",
+                            Email = "admin@ucne.edu.do",
+                            NombreUsuario = "admin",
+                            Nombres = "Admin"
                         });
                 });
 

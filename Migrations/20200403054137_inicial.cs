@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataVentas.Migrations
 {
-    public partial class DataVentas : Migration
+    public partial class inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -206,7 +206,7 @@ namespace DataVentas.Migrations
             migrationBuilder.InsertData(
                 table: "Usuarios",
                 columns: new[] { "UsuarioId", "Clave", "Email", "NombreUsuario", "Nombres" },
-                values: new object[] { 1, "maria2017", "maria_alberto1@ucne.edu.do", "MariaAl", "Maria Isabel Alberto" });
+                values: new object[] { 1, "admin", "admin@ucne.edu.do", "admin", "Admin" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_ComprasDetalles_CompraId",

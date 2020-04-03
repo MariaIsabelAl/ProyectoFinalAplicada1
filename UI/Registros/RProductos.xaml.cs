@@ -34,13 +34,12 @@ namespace DataVentas.UI.Registros
             precioTextBox.Text = "0";
             CostoTextBox.Text = "0";
             UsuarioIdTextBox.Text = "0";
-
-
         }
 
         private bool Existe()
         {
-            productos = ProductosBll.Buscar(Convert.ToInt32(ProductoIdTextBox.Text));
+            Productos productoA = ProductosBll.Buscar(productos.ProductoId);
+            //productos = ProductosBll.Buscar(Convert.ToInt32(ProductoIdTextBox.Text));
             return (productos != null);
         }
 
@@ -59,16 +58,16 @@ namespace DataVentas.UI.Registros
         {
             bool paso = false;
 
-            //Si todos los TexBoxes estan vacios, no te permite Guardar
-            if ((DescripcionTextBox.Text == string.Empty || CantidadTextBox.Text == "0" ||
-            precioTextBox.Text == "0"||
-            CostoTextBox.Text == "0"||
-            UsuarioIdTextBox.Text == "0"))
-            {
+            ////Si todos los TexBoxes estan vacios, no te permite Guardar
+            //if ((DescripcionTextBox.Text == string.Empty || CantidadTextBox.Text == "0" ||
+            //precioTextBox.Text == "0"||
+            //CostoTextBox.Text == "0"||
+            //UsuarioIdTextBox.Text == "0"))
+            //{
 
-                MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
+            //    MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    return;
+            //}
 
             if (string.IsNullOrWhiteSpace(ProductoIdTextBox.Text) || ProductoIdTextBox.Text == "0")
                 paso = ProductosBll.Guardar(productos);
@@ -81,8 +80,6 @@ namespace DataVentas.UI.Registros
                 }
                 paso = ProductosBll.Modificar(productos);
             }
-
-           
 
             if (paso)
             {

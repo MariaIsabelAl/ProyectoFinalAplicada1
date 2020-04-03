@@ -24,7 +24,7 @@ namespace DataVentas.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Usuarios>().HasData(new Usuarios { UsuarioId = 1, Nombres = "Maria Isabel Alberto", NombreUsuario="MariaAl",Email="maria_alberto1@ucne.edu.do", Clave="maria2017" });
+            modelBuilder.Entity<Usuarios>().HasData(new Usuarios { UsuarioId = 1, Nombres = "Admin", NombreUsuario="admin",Email="admin@ucne.edu.do", Clave="admin" });
            
         }
 
