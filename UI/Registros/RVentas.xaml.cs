@@ -50,7 +50,7 @@ namespace DataVentas.UI.Registros
 
         private bool Existe()
         {
-            ventas = VentasBll.Buscar(Convert.ToInt32(VentasIdTextBox.Text));
+            Ventas ventaA = VentasBll.Buscar(ventas.VentaId);
             return (ventas != null);
         }
 
