@@ -38,7 +38,8 @@ namespace DataVentas.UI.Registros
 
         private bool Existe()
         {
-            pagoscompras = PagosComprasBll.Buscar(Convert.ToInt32(PagoCompraIdTextBox.Text));
+            PagosCompras pagocompraA = PagosComprasBll.Buscar(pagoscompras.PagoCompraId);
+            //pagoscompras = PagosComprasBll.Buscar(Convert.ToInt32(PagoCompraIdTextBox.Text));
             return (pagoscompras != null);
         }
 
@@ -75,8 +76,6 @@ namespace DataVentas.UI.Registros
                     return;
                 }
                 paso = PagosComprasBll.Modificar(pagoscompras);
-                Actualizar();
-
             }
 
             if (paso)
