@@ -41,7 +41,8 @@ namespace DataVentas.UI.Registros
        
         private bool Existe()
         {
-            usuarios = UsuariosBll.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
+            Usuarios usuarioA = UsuariosBll.Buscar(usuarios.UsuarioId);
+            //usuarios = UsuariosBll.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
             return (usuarios != null);
         }
 
@@ -59,23 +60,28 @@ namespace DataVentas.UI.Registros
         {
             bool paso = false;
 
-            //Si todos los TexBoxes estan vacios, no te permite Guardar
-            if ((NombreTextBox.Text == string.Empty || NombreUsuarioTextBox.Text == string.Empty || EmailTextBox.Text == string.Empty || ClaveTextBox.Text == string.Empty))
-            {
-                MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
+            ////Si todos los TexBoxes estan vacios, no te permite Guardar
+            //if ((NombreTextBox.Text == string.Empty || NombreUsuarioTextBox.Text == string.Empty || EmailTextBox.Text == string.Empty || ClaveTextBox.Text == string.Empty))
+            //{
+            //    MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    return;
+            //}
             
             if (string.IsNullOrWhiteSpace(UsuarioIdTextBox.Text) || UsuarioIdTextBox.Text == "0")
                 paso = UsuariosBll.Guardar(usuarios);
             else
             {
-                if (!Existe())
+                if (Existe())
+                {
+                    paso = UsuariosBll.Modificar(usuarios);
+                    
+                }
+                else
                 {
                     MessageBox.Show("No Se puede Modificar porque no existe", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-                paso = UsuariosBll.Modificar(usuarios);
+                
                
             }
 
