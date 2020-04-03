@@ -49,7 +49,8 @@ namespace DataVentas.UI.Registros
 
         private bool Existe()
         {
-            compras = ComprasBll.Buscar(Convert.ToInt32(CompraIdTextBox.Text));
+            Compras compraA = ComprasBll.Buscar(compras.CompraId);
+            //compras = ComprasBll.Buscar(Convert.ToInt32(CompraIdTextBox.Text));
             return (compras != null);
         }
 
