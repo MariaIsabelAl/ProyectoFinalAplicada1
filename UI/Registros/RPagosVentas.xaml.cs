@@ -36,7 +36,8 @@ namespace DataVentas.UI.Registros
         }
         private bool Existe()
         {
-            pagosventas = PagosVentasBll.Buscar(Convert.ToInt32(PagoVentaIdTextBox.Text));
+            PagosVentas pagosventasA = PagosVentasBll.Buscar(pagosventas.PagoVentaId);
+            //pagosventas = PagosVentasBll.Buscar(Convert.ToInt32(PagoVentaIdTextBox.Text));
             return (pagosventas != null);
         }
 
@@ -54,12 +55,12 @@ namespace DataVentas.UI.Registros
         {
             bool paso = false;
 
-            //Si todos los TexBoxes estan vacios, no te permite Guardar
-            if ((MontoTextBox.Text == "0"))
-            {
-                MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
+            ////Si todos los TexBoxes estan vacios, no te permite Guardar
+            //if ((MontoTextBox.Text == "0"))
+            //{
+            //    MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    return;
+            //}
 
 
             if (string.IsNullOrWhiteSpace(PagoVentaIdTextBox.Text) || PagoVentaIdTextBox.Text == "0")
@@ -72,11 +73,8 @@ namespace DataVentas.UI.Registros
                     return;
                 }
                 paso = PagosVentasBll.Modificar(pagosventas);
-                Actualizar();
-
             }
-           
-
+       
             if (paso)
             {
                 Limpiar();
@@ -100,6 +98,22 @@ namespace DataVentas.UI.Registros
             else
                 MessageBox.Show(PagoVentaIdTextBox.Text, "No se puede eliminar una persona que no existe");
 
+        }
+
+        private void BuscarButton_Click(object sender, RoutedEventArgs e)
+        {
+            PagosVentas anterior = PagosVentasBll.Buscar(Convert.ToInt32(PagoVentaIdTextBox.Text));
+
+            if (anterior != null)
+            {
+                pagosventas = anterior;
+                Actualizar();
+            }
+            else
+            {
+                MessageBox.Show("Venta no Encontrada :(");
+
+            }
         }
     }
 }

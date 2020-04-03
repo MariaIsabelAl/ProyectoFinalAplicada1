@@ -33,7 +33,7 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left" HorizontalContentAlignment="Right"  Width="63" Grid.Column="2" Height="25"  FontWeight="Bold" Margin="10,0,1,2">
+            <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left" HorizontalContentAlignment="Right"  Width="63" Grid.Column="2" Height="25"  FontWeight="Bold" Margin="10,0,1,2" Click="BuscarButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/Resources/Buscar.png" Stretch="Uniform" AlignmentX="Left"/>
                 </Button.Background>
