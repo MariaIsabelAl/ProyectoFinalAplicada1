@@ -41,7 +41,6 @@ namespace DataVentas.UI.Registros
         private bool Existe()
         {
             Vendedores vendedorA = VendedoresBll.Buscar(vendedores.VendedorId);
-            //vendedores = VendedoresBll.Buscar(Convert.ToInt32(VendedorIdTextBox.Text));
             return (vendedorA != null);
         }
 
@@ -60,33 +59,29 @@ namespace DataVentas.UI.Registros
         {
             bool paso = false;
 
-            ////Si todos los TexBoxes estan vacios, no te permite Guardar
-            //if ((VededorNombreTextBox.Text == string.Empty || VendedorEmailTextBox.Text == string.Empty ||
-            //VendedorTelefonoTextBox.Text == string.Empty ||
-            //VendedorCelularTextBox.Text == string.Empty ||
-            //VendedorCedulaTextBox.Text == string.Empty ||
-            //VendedorDireccionTextBox.Text == string.Empty))
-            //{
+            //Si todos los TexBoxes estan vacios, no te permite Guardar
+            if ((VededorNombreTextBox.Text == string.Empty || VendedorEmailTextBox.Text == string.Empty ||
+            VendedorTelefonoTextBox.Text == string.Empty ||
+            VendedorCelularTextBox.Text == string.Empty ||
+            VendedorCedulaTextBox.Text == string.Empty ||
+            VendedorDireccionTextBox.Text == string.Empty))
+            {
 
-            //    MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
-            //    return;
-            //}
+                MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
 
-            if (VendedorIdTextBox.Text == "0")
+            if (string.IsNullOrWhiteSpace(VendedorIdTextBox.Text) || VendedorIdTextBox.Text == "0")
                 paso = VendedoresBll.Guardar(vendedores);
             else
             {
-                if (Existe())
-                {
-                    paso = VendedoresBll.Modificar(vendedores);
-                    
-                }
-                else
+                if (!Existe())
                 {
                     MessageBox.Show("No Se puede Modificar porque no existe", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-                
+                paso = VendedoresBll.Modificar(vendedores);
+
             }
 
             if (paso)

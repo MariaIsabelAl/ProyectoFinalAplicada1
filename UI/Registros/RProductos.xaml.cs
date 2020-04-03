@@ -39,7 +39,6 @@ namespace DataVentas.UI.Registros
         private bool Existe()
         {
             Productos productoA = ProductosBll.Buscar(productos.ProductoId);
-            //productos = ProductosBll.Buscar(Convert.ToInt32(ProductoIdTextBox.Text));
             return (productos != null);
         }
 

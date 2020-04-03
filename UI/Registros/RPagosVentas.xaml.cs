@@ -37,7 +37,6 @@ namespace DataVentas.UI.Registros
         private bool Existe()
         {
             PagosVentas pagosventasA = PagosVentasBll.Buscar(pagosventas.PagoVentaId);
-            //pagosventas = PagosVentasBll.Buscar(Convert.ToInt32(PagoVentaIdTextBox.Text));
             return (pagosventas != null);
         }
 
@@ -55,13 +54,12 @@ namespace DataVentas.UI.Registros
         {
             bool paso = false;
 
-            ////Si todos los TexBoxes estan vacios, no te permite Guardar
-            //if ((MontoTextBox.Text == "0"))
-            //{
-            //    MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
-            //    return;
-            //}
-
+            //Si todos los TexBoxes estan vacios, no te permite Guardar
+            if ((MontoTextBox.Text == "0"))
+            {
+                MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
 
             if (string.IsNullOrWhiteSpace(PagoVentaIdTextBox.Text) || PagoVentaIdTextBox.Text == "0")
                 paso = PagosVentasBll.Guardar(pagosventas);
