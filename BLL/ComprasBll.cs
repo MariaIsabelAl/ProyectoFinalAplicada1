@@ -18,6 +18,12 @@ namespace DataVentas.BLL
 
             try
             {
+                foreach (var item in compras.CompraDetalle)
+                {
+                    var producto = contexto.Productos.Find(item.ProductoId);
+                    if (producto != null)
+                        producto.Cantidad += item.Cantidad;
+                }
                 if (contexto.Compras.Add(compras) != null)
                     paso = contexto.SaveChanges() > 0;
             }

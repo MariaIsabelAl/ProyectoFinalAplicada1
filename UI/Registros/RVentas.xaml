@@ -127,7 +127,7 @@
             <TextBlock Name="UsuarioIdLabel" Text="UsuarioId" Margin="10,5,5,5" Width="87" />
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="8">
-            <TextBlock Name="DescuentoLabel" Text="Descuento" Margin="30,5,5,5" Width="87" />
+            <TextBlock Name="DescuentoLabel" Text="Descuento" Margin="30,5,5,5"/>
             <TextBox Name="DescuentoTextBox" Margin="0,1,0,0" Grid.Column="1"  Foreground="Blue" Grid.ColumnSpan="2" Width="162">
                 <TextBox.Text>
                     <Binding Path="Descuento" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">

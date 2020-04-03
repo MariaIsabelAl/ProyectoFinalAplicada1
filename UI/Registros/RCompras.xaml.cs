@@ -62,16 +62,15 @@ namespace DataVentas.UI.Registros
         {
             bool paso = false;
             //Si todos los TexBoxes estan vacios, no te permite Guardar
-            if ((DevueltaTextBox.Text == "0"||
-            MontoTextBox.Text == "0"||
-            BalanceTextBox.Text == "0"||
-            DescuentoTextBox.Text == "0"||
+            if ((DevueltaTextBox.Text == "0" ||
+            MontoTextBox.Text == "0" ||
+            BalanceTextBox.Text == "0" ||
+            DescuentoTextBox.Text == "0" ||
             UsuarioIdTextBox.Text == "0"))
             {
                 MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-
 
             if (string.IsNullOrWhiteSpace(CompraIdTextBox.Text) || CompraIdTextBox.Text == "0")
                 paso = ComprasBll.Guardar(compras);

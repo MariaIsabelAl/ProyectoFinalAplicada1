@@ -14,7 +14,7 @@ namespace DataVentas.Entidades
         public int Cantidad { get; set; }
         public string Descripcion { get; set; }
         public decimal Precio { get; set; }
-
+        
 
         public ComprasDetalles()
         {
@@ -24,9 +24,7 @@ namespace DataVentas.Entidades
             Cantidad = 0;
             Descripcion = string.Empty;
             Precio = 0;
-
-
-
+ 
         }
 
         public ComprasDetalles(int Compraid, int productoid, int cantidad, string descripcion, decimal precio)
@@ -37,7 +35,7 @@ namespace DataVentas.Entidades
             Cantidad = cantidad;
             Descripcion = descripcion;
             Precio = precio;
-           
+ 
         }
 
     }
