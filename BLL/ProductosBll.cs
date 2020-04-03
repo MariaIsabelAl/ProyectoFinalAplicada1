@@ -80,7 +80,7 @@ namespace DataVentas.BLL
             Contexto contexto = new Contexto();
             try
             {
-                var eliminar = contexto.Usuarios.Find(id);
+                var eliminar = contexto.Productos.Find(id);
                 contexto.Entry(eliminar).State = EntityState.Deleted;
                 paso = contexto.SaveChanges() > 0;
             }

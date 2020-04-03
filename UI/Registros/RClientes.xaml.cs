@@ -42,7 +42,7 @@ namespace DataVentas.UI.Registros
 
         private bool Existe()
         {
-            clientes = ClientesBll.Buscar(Convert.ToInt32(ClienteIdTextBox.Text));
+            Clientes clienteA = ClientesBll.Buscar(clientes.ClienteId);
             return (clientes != null);
         }
 
@@ -62,14 +62,14 @@ namespace DataVentas.UI.Registros
 
             bool paso = false;
 
-            //Si todos los TexBoxes estan vacios, no te permite Guardar
-            if ((NombresTextBox.Text == string.Empty || EmailTextBox.Text == string.Empty || TelefonoTextBox.Text == string.Empty || CelularTextBox.Text == string.Empty || CedulaTextBox.Text == string.Empty || DireccionTextBox.Text == string.Empty))
-            {
-                MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
+            ////Si todos los TexBoxes estan vacios, no te permite Guardar
+            //if ((NombresTextBox.Text == string.Empty || EmailTextBox.Text == string.Empty || TelefonoTextBox.Text == string.Empty || CelularTextBox.Text == string.Empty || CedulaTextBox.Text == string.Empty || DireccionTextBox.Text == string.Empty))
+            //{
+            //    MessageBox.Show("Mi Hermano, Pero llene algo :/ :(", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    return;
+            //}
 
-            if (string.IsNullOrWhiteSpace(ClienteIdTextBox.Text) || ClienteIdTextBox.Text == "0")
+            if (ClienteIdTextBox.Text == "0")
                 paso = ClientesBll.Guardar(clientes);
             else
             {
