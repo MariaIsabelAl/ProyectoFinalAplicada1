@@ -14,7 +14,6 @@ using DataVentas.BLL;
 
 namespace DataVentas.UI.Consultas
 {
-  
     public partial class cClientes : Window
     {
         public cClientes()
