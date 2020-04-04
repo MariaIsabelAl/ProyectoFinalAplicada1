@@ -107,6 +107,9 @@ namespace DataVentas.Migrations
                     b.Property<int>("ProductoId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<decimal>("Total")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("CompraDetalleId");
 
                     b.HasIndex("CompraId");

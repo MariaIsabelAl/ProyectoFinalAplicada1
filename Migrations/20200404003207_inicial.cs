@@ -166,7 +166,8 @@ namespace DataVentas.Migrations
                     ProductoId = table.Column<int>(nullable: false),
                     Cantidad = table.Column<int>(nullable: false),
                     Descripcion = table.Column<string>(nullable: true),
-                    Precio = table.Column<decimal>(nullable: false)
+                    Precio = table.Column<decimal>(nullable: false),
+                    Total = table.Column<decimal>(nullable: false)
                 },
                 constraints: table =>
                 {

@@ -66,7 +66,7 @@ namespace DataVentas.UI.Registros
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
             bool paso = false;
- 
+
             if (string.IsNullOrWhiteSpace(VentasIdTextBox.Text) || VentasIdTextBox.Text == "0")
                 paso = VentasBll.Guardar(ventas);
             else
