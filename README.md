@@ -21,8 +21,8 @@ Bienvenidos a este proyecto, esta miniManual te ayudara a no cometer errores.
 <br>
 
 Aqui el usuario pone su Nombre de Usuario y su Clave, no se le puede olvidar su clave porque no se recupera, el usuario en uso es:
-**MariaAl**  Nombre de Usuario
-**maria2017** clave, le damos a entrar.
+**admin**  Nombre de Usuario
+**admin** clave, le damos a entrar.
 siempre debe de ver por lo menos un usuario para poder entrar al proyecto.
 
 
