@@ -15,11 +15,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataVentas.UI.Registros
 {
-    
     public partial class rCompras : Window
     {
         Compras compras = new Compras();
-
         public rCompras()
         {
             InitializeComponent();
