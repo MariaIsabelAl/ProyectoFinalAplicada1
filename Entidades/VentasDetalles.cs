@@ -25,7 +25,6 @@ namespace DataVentas.Entidades
             Descripcion = string.Empty;
             Precio = 0;
             Total = 0;
-
         }
 
         public VentasDetalles(int ventaid, int productoid, int cantidad, string descripcion, decimal precio)
