@@ -66,6 +66,16 @@ namespace DataVentas.UI.Registros
         {
             bool paso = false;
 
+            //si hay campos escenciales vacios No guarda
+            if(VendedorIdTextBox.Text == "0" ||
+                ClienteIdTextBox.Text == "0" ||
+                UsuarioIdTextBox.Text == "0")
+            {
+                MessageBox.Show("Este registro no se puede guardar, ya que le faltan campos escenciales [Usuario, vendedor o CLiente], favor crear estos campos si no lo tiene creado"
+                    , "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             if (string.IsNullOrWhiteSpace(VentasIdTextBox.Text) || VentasIdTextBox.Text == "0")
                 paso = VentasBll.Guardar(ventas);
             else
