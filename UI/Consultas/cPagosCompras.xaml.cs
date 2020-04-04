@@ -15,39 +15,39 @@ using System.Windows.Shapes;
 namespace DataVentas.UI.Consultas
 {
     /// <summary>
-    /// Interaction logic for PagosVentasConsultas.xaml
+    /// Interaction logic for cPagosCompras.xaml
     /// </summary>
-    public partial class PagosVentasConsultas : Window
+    public partial class cPagosCompras : Window
     {
-        public PagosVentasConsultas()
+        public cPagosCompras()
         {
             InitializeComponent();
         }
 
         private void ConsultarButton_Click_1(object sender, RoutedEventArgs e)
         {
-            var listado = new List<PagosVentas>();
+            var listado = new List<PagosCompras>();
 
             if (CriterioTextBox.Text.Trim().Length > 0)
             {
                 switch (FiltroComboBox.SelectedIndex)
                 {
                     case 0://todo
-                        listado = PagosVentasBll.GetList(p => true);
+                        listado = PagosComprasBll.GetList(p => true);
                         break;
                     case 1://ID
                         int id = Convert.ToInt32(CriterioTextBox.Text);
-                        listado = PagosVentasBll.GetList(p => p.VentaId == id);
+                        listado = PagosComprasBll.GetList(p => p.CompraId == id);
                         break;
                     case 2://Fecha
                         DateTime fecha = Convert.ToDateTime(CriterioTextBox.Text);
-                        listado = PagosVentasBll.GetList(p => p.Fecha == fecha);
+                        listado = PagosComprasBll.GetList(p => p.Fecha == fecha);
                         break;
                 }
             }
             else
             {
-                listado = PagosVentasBll.GetList(p => true);
+                listado = PagosComprasBll.GetList(p => true);
             }
 
             ConsultaDataGrip.ItemsSource = null;

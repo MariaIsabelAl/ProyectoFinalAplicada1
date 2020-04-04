@@ -27,98 +27,98 @@ namespace DataVentas
 
         private void UsuarioMenutem_Click(object sender, RoutedEventArgs e)
         {
-            RUsuarios rusuarios = new RUsuarios();
+            rUsuarios rusuarios = new rUsuarios();
             rusuarios.Show();
         }
 
         private void UsuariosConsultasMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            UsuariosConsultas consultas = new UsuariosConsultas();
+            cUsuarios consultas = new cUsuarios();
             consultas.Show();
         }
 
         private void ProductosMenutem_Click(object sender, RoutedEventArgs e)
         {
-            RProductos rProductos = new RProductos();
+            rProductos rProductos = new rProductos();
             rProductos.Show();
         }
 
         private void ClientesMenutem_Click(object sender, RoutedEventArgs e)
         {
-            RClientes rClientes = new RClientes();
+            rClientes rClientes = new rClientes();
             rClientes.Show();
         }
 
         private void ComprasMenutem_Click(object sender, RoutedEventArgs e)
         {
-            RCompras rCompras = new RCompras();
+            rCompras rCompras = new rCompras();
             rCompras.Show();
         }
 
         private void ClientesConsutasMenutem_Click(object sender, RoutedEventArgs e)
         {
-            ClientesConsultas consultas = new ClientesConsultas();
+            cClientes consultas = new cClientes();
             consultas.Show();
         }
 
         private void ProductosConsutasMenutem_Click(object sender, RoutedEventArgs e)
         {
-            ProductosConsultas consultas = new ProductosConsultas();
+            cProductos consultas = new cProductos();
             consultas.Show();
         }
 
         private void ComprasConsutasMenutem_Click(object sender, RoutedEventArgs e)
         {
-            ComprasConsultas consultas = new ComprasConsultas();
+            cCompras consultas = new cCompras();
             consultas.Show();
         }
 
         private void VendedoresMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            RVendedores rVendedores = new RVendedores();
+            rVendedores rVendedores = new rVendedores();
             rVendedores.Show();
 
         }
 
         private void VendedoresConsultasmenuItem_Click(object sender, RoutedEventArgs e)
         {
-            VendedoresConsultas vendedoresConsulta = new VendedoresConsultas();
+            cVendedores vendedoresConsulta = new cVendedores();
             vendedoresConsulta.Show();
         }
 
         private void VentasMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            RVentas rVentas = new RVentas();
+            rVentas rVentas = new rVentas();
             rVentas.Show();
         }
 
         private void VentasConsultasMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            VentasConsultas vConsultas = new VentasConsultas();
+            cVentas vConsultas = new cVentas();
             vConsultas.Show();
         }
 
         private void PagosComprasMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            RPagosCompras rPagosCompras = new RPagosCompras();
+            rPagosCompras rPagosCompras = new rPagosCompras();
             rPagosCompras.Show();
         }
 
         private void PagosComprasMenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            PagosComprasConsultas cPagosC = new PagosComprasConsultas();
+            cPagosCompras cPagosC = new cPagosCompras();
             cPagosC.Show();
         }
 
         private void PagosVentasMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            RPagosVentas rPagosVentas = new RPagosVentas();
+            rPagosVentas rPagosVentas = new rPagosVentas();
             rPagosVentas.Show();
         }
 
         private void PagosVentasConsultasMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            PagosVentasConsultas pVentasC = new PagosVentasConsultas();
+            cPagosVentas pVentasC = new cPagosVentas();
             pVentasC.Show();
         }
 

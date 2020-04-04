@@ -1,11 +1,11 @@
-﻿<Window x:Class="DataVentas.UI.Consultas.PagosComprasConsultas"
+﻿<Window x:Class="DataVentas.UI.Consultas.cProductos"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataVentas.UI.Consultas"
         mc:Ignorable="d"
-        Title="Consultas Pagos Compras " Height="450" Width="800">
+        Title="Consultas Productos" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto">
@@ -25,18 +25,19 @@
         <ComboBox x:Name="FiltroComboBox" HorizontalAlignment="Left" Height="19" Margin="54,6,0,0" VerticalAlignment="Top" Width="189" >
             <ComboBoxItem Content="Todo"/>
             <ComboBoxItem Content="Id"/>
-            <ComboBoxItem Content="Fecha"/>
+            <ComboBoxItem Content="Descripción"/>
+            
         </ComboBox>
         <StackPanel Grid.Column="2">
             <Label x:Name="CriterioLabel" Content="Criterio" HorizontalAlignment="Left" Height="33" Margin="248,0,0,0" VerticalAlignment="Top" Width="146" FontWeight="Bold"/>
         </StackPanel>
         <TextBox x:Name="CriterioTextBox" HorizontalAlignment="Left" Height="22" Margin="302,5,0,0" Text=" " TextWrapping="Wrap" VerticalAlignment="Top" Width="181" />
-        <Button x:Name="ConsultarButton" Content="Consultar" HorizontalAlignment="Left" Height="32" Margin="494,0,0,385" Width="183" FontWeight="Bold" Click="ConsultarButton_Click_1"  >
+        <Button x:Name="ConsultarButton" Content="Consultar" HorizontalAlignment="Left" Height="32" Margin="494,0,0,385" Width="183" FontWeight="Bold" Click="ConsultarButton_Click"    >
             <Button.Background>
-                <ImageBrush ImageSource="/Resources/PagosCompras.png" Stretch="Uniform" AlignmentX="Left"/>
+                <ImageBrush ImageSource="/Resources/Consultar.png" Stretch="Uniform" AlignmentX="Left"/>
             </Button.Background>
         </Button>
-        <DataGrid x:Name="ConsultaDataGrip" HorizontalAlignment="Left" Width="718"  Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Height="367" VerticalAlignment="Top" Margin="37,36,0,0" />
+        <DataGrid x:Name="ConsultaDataGrip" HorizontalAlignment="Left" Width="735"  Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Height="367" VerticalAlignment="Top" Margin="37,36,0,0" />
 
 
     </Grid>

@@ -18,10 +18,10 @@ using Microsoft.EntityFrameworkCore;
 namespace DataVentas.UI.Registros
 {
     
-    public partial class RUsuarios : Window
+    public partial class rUsuarios : Window
     {
         Usuarios usuarios = new Usuarios();
-        public RUsuarios()
+        public rUsuarios()
         {
             InitializeComponent();
             this.DataContext = usuarios;

@@ -15,10 +15,10 @@ using System.Windows.Shapes;
 namespace DataVentas.UI.Registros
 {
     
-    public partial class RPagosCompras : Window
+    public partial class rPagosCompras : Window
     {
         PagosCompras pagoscompras = new PagosCompras();
-        public RPagosCompras()
+        public rPagosCompras()
         {
             InitializeComponent();
             this.DataContext = pagoscompras;

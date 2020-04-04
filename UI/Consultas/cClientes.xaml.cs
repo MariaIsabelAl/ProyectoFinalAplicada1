@@ -1,6 +1,4 @@
-﻿using DataVentas.BLL;
-using DataVentas.Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -11,40 +9,42 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DataVentas.Entidades;
+using DataVentas.BLL;
 
 namespace DataVentas.UI.Consultas
 {
-    /// <summary>
-    /// Interaction logic for VentasConsultas.xaml
-    /// </summary>
-    public partial class VentasConsultas : Window
+  
+    public partial class cClientes : Window
     {
-        public VentasConsultas()
+        public cClientes()
         {
             InitializeComponent();
         }
 
         private void ConsultarButton_Click(object sender, RoutedEventArgs e)
         {
-            var listado = new List<Ventas>();
+            var listado = new List<Clientes>();
 
             if (CriterioTextBox.Text.Trim().Length > 0)
             {
                 switch (FiltroComboBox.SelectedIndex)
                 {
                     case 0://todo
-                        listado = VentasBll.GetList(p => true);
+                        listado = ClientesBll.GetList(p => true);
                         break;
                     case 1://ID
                         int id = Convert.ToInt32(CriterioTextBox.Text);
-                        listado = VentasBll.GetList(p => p.VentaId == id);
+                        listado = ClientesBll.GetList(p => p.ClienteId == id);
                         break;
-                    case 2://Fecha
-                        DateTime fecha = Convert.ToDateTime(CriterioTextBox.Text);
-                        listado = VentasBll.GetList(p => p.Fecha == fecha);
+                    case 2://Nombres
+                        listado = ClientesBll.GetList(p => p.Nombres.Contains(CriterioTextBox.Text));
                         break;
-                    case 3://TipoCompra
-                        listado = VentasBll.GetList(p => p.TipoVenta.Contains(CriterioTextBox.Text));
+                    case 3://Telefono
+                        listado = ClientesBll.GetList(p => p.Telefono.Contains(CriterioTextBox.Text));
+                        break;
+                    case 4://Cedula
+                        listado = ClientesBll.GetList(p => p.Cedula.Contains(CriterioTextBox.Text));
                         break;
 
                 }
@@ -52,11 +52,13 @@ namespace DataVentas.UI.Consultas
             }
             else
             {
-                listado = VentasBll.GetList(p => true);
+                listado = ClientesBll.GetList(p => true);
             }
 
             ConsultaDataGrip.ItemsSource = null;
             ConsultaDataGrip.ItemsSource = listado;
+
         }
+    
     }
 }

@@ -16,11 +16,11 @@ using Microsoft.EntityFrameworkCore;
 namespace DataVentas.UI.Registros
 {
     
-    public partial class RCompras : Window
+    public partial class rCompras : Window
     {
         Compras compras = new Compras();
 
-        public RCompras()
+        public rCompras()
         {
             InitializeComponent();
             this.DataContext = compras;

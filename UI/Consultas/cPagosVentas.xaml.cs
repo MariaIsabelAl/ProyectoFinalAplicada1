@@ -15,50 +15,44 @@ using System.Windows.Shapes;
 namespace DataVentas.UI.Consultas
 {
     /// <summary>
-    /// Interaction logic for VendedoresConsultas.xaml
+    /// Interaction logic for cPagosVentas.xaml
     /// </summary>
-    public partial class VendedoresConsultas : Window
+    public partial class cPagosVentas : Window
     {
-        public VendedoresConsultas()
+        public cPagosVentas()
         {
             InitializeComponent();
         }
 
-        private void ConsultarButton_Click(object sender, RoutedEventArgs e)
+        private void ConsultarButton_Click_1(object sender, RoutedEventArgs e)
         {
-            var listado = new List<Vendedores>();
+            var listado = new List<PagosVentas>();
 
             if (CriterioTextBox.Text.Trim().Length > 0)
             {
                 switch (FiltroComboBox.SelectedIndex)
                 {
                     case 0://todo
-                        listado = VendedoresBll.GetList(p => true);
+                        listado = PagosVentasBll.GetList(p => true);
                         break;
                     case 1://ID
                         int id = Convert.ToInt32(CriterioTextBox.Text);
-                        listado = VendedoresBll.GetList(p => p.VendedorId == id);
+                        listado = PagosVentasBll.GetList(p => p.VentaId == id);
                         break;
-                    case 2://Nombres
-                        listado = VendedoresBll.GetList(p => p.Nombres.Contains(CriterioTextBox.Text));
+                    case 2://Fecha
+                        DateTime fecha = Convert.ToDateTime(CriterioTextBox.Text);
+                        listado = PagosVentasBll.GetList(p => p.Fecha == fecha);
                         break;
-                    case 3://Telefono
-                        listado = VendedoresBll.GetList(p => p.Telefono.Contains(CriterioTextBox.Text));
-                        break;
-                    case 4://Cedula
-                        listado = VendedoresBll.GetList(p => p.Cedula.Contains(CriterioTextBox.Text));
-                        break;
-
                 }
-
             }
             else
             {
-                listado = VendedoresBll.GetList(p => true);
+                listado = PagosVentasBll.GetList(p => true);
             }
 
             ConsultaDataGrip.ItemsSource = null;
             ConsultaDataGrip.ItemsSource = listado;
+
         }
     }
 }

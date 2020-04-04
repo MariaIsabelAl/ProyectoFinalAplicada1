@@ -16,10 +16,10 @@ using Microsoft.EntityFrameworkCore;
 namespace DataVentas.UI.Registros
 {
     
-    public partial class RProductos : Window
+    public partial class rProductos : Window
     {
         Productos productos = new Productos();
-        public RProductos()
+        public rProductos()
         {
             InitializeComponent();
             this.DataContext = productos;

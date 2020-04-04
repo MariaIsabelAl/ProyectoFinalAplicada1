@@ -15,9 +15,9 @@ using DataVentas.BLL;
 namespace DataVentas.UI.Consultas
 {
     
-    public partial class UsuariosConsultas : Window
+    public partial class cUsuarios : Window
     {
-        public UsuariosConsultas()
+        public cUsuarios()
         {
             InitializeComponent();
         }
