@@ -15,7 +15,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataVentas.UI.Registros
 {
-   
     public partial class rClientes : Window
     {
         Clientes clientes = new Clientes();
